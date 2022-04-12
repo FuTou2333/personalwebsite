@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-You can use the [editor on GitHub](https://github.com/FuTou2333/personalwebsite/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bilibili@弗头嘿嘿嘿</title>
+    </head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    <body style="display: flex;margin: 0;flex-direction: column;align-items: center;">
 
-### Markdown
+        <part1 style="width: 100%;background-image: url(https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/common/4b139dfba07fc9ea3f75171b0747ab2e_w1920_h1080_s3993.jpg?imageView2/1/w/3000/h/800);color: white;letter-spacing: 1px;line-height: 1.8;min-height: 70vh;display: flex;flex-direction: column;align-items: flex-start;">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+            <section1 style="display: flex;width: 100%;height: 100px;background-color: #0000007a;justify-content: flex-end;">
+                <img src="https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/avatar/c8960e10408c9479b83ebf7c3c58db04_w1077_h1078_s317.jpg?imageView2/1/w/240/h/240" alt="头像" width="100" height="100">
+            </section1>
 
-```markdown
-Syntax highlighted code block
+            <section2>
+                <p style="font-size: 30px;margin: 30px;padding: 10px;"><b>bilibili@弗头嘿嘿嘿</b></p>
+                <p style="margin: 30px;padding: 10px;">学生党新人UP主一枚<br>主要做MC视频<br>制作视频不易，喜欢就三连支持一下呗～</p>
+                <p style="margin: 30px;padding: 10px;">
+                    <a href="https://space.bilibili.com/395180217" target="_blank">
+                    <input type="button" value="B站个人空间" tltle="点击访问"></a>
+                <br>
+                    <a href="https://afdian.net/@futou_2333" target="_blank">
+                    <input type="button" value="个人爱发电页面" title="点击访问"></a>
+                </p>
+            </section2>
 
-# Header 1
-## Header 2
-### Header 3
+        </part1>
 
-- Bulleted
-- List
+        <part2 style="display: flex;flex-direction: column;align-items: center;width: 100%;">
 
-1. Numbered
-2. List
+            <section3 style="padding: 30px;padding-top: 0;display: flex;flex-direction: column;">
+                <p style="font-size: x-large;background-color: #00000029;padding: 5px;border-radius: 5px; margin-bottom: 0;"><b>Are you OK!<br>学会CSS，立省200w！[doge]</b></p>
+                <p style="background-color: #00000029;padding: 5px;border-radius: 5px;">↓ 这张梗图我很早就看过，现在居然刚好学到了 ↓<br><del>现学现卖</del> 活学活用</p>
+                <img src="http://pic.rmb.bdstatic.com/bjh/news/0eac74e7e77fb5b8034bb98c8ef93e53.gif" alt="梗图" width="431">
+            </section3>
 
-**Bold** and _Italic_ and `Code` text
+            <section4 style="background-color: #eee;width: 100%;display: flex;flex-direction: column;align-items: center;padding: 30px;padding-top: 0;">
+                <p style="font-size: x-large; margin-bottom: 0;"><b>从零开始的编程之路！</b></p>
+                <p>【UP主】bilibili@康文昌 【UID】34786453</p>
+                <iframe loading="lazy" src="https://space.bilibili.com/34786453" width="75%" height="500px"></iframe>
+            </section4>
 
-[Link](url) and ![Image](src)
-```
+            <section5 style="height: 100px;display: flex;align-items: center;">
+                <p>2022.4.12 bilibili@弗头嘿嘿嘿</p>
+            </section5>
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+        </part2>
 
-### Jekyll Themes
+    </body>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/FuTou2333/personalwebsite/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
