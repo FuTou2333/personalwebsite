@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>两点间距离计算器</title>
+</head>
+    <body style="display: flex;margin: 0;flex-direction: column;align-items: center; font-family: 微软雅黑;">
+                <js_test>
+                    <js_test_title>
+                        <p style="border:0;">两点间距离计算</p>
+                    </js_test_title>
+                    <js_test_text style="display: flex;flex-direction: column;">
+                        <row1 style="margin-bottom:20px">
+                            <input id="x1" placeholder="第一个点x坐标">
+                            <input id="x2" placeholder="第一个点y坐标">
+                        </row1>
+                        <row2 style="margin-bottom:25px">
+                            <input id="y1" placeholder="第二个点x坐标">
+                            <input id="y2" placeholder="第二个点y坐标">
+                        </row2>
+                        <button id="dzs" onclick="distancecalculate()" style="width:100%;">计算</button>
+                        <p style="font-size:18px;margin-bottom:5px">计算结果</p>
+                        <button id="result"></button>
+                        <script>
+                        function distancecalculate(){
+                            let x1 = window.document.getElementById('x1').value;
+                            let x1_number = parseInt(x1);
+                            let x2 = window.document.getElementById('x2').value;
+                            let x2_number = parseInt(x2);
+                            let y1 = window.document.getElementById('y1').value;
+                            let y1_number = parseInt(y1);
+                            let y2 = window.document.getElementById('y2').value;
+                            let y2_number = parseInt(y2);
+                            let result_raw_x = x1_number - x2_number;
+                            let result_raw_y = y1_number - y2_number;
+                            let result_final_x = Math.pow(result_raw_x,2);
+                            let result_final_y = Math.pow(result_raw_y,2);
+                            let result_raw = result_final_x + result_final_y;
+                            let result_final = Math.sqrt(result_raw);
+                            result.innerText = result_final;
+                        }
+                        </script>
+                    </js_test_text>
+                </js_test>     
+    </body>
+</html>
