@@ -371,13 +371,13 @@
 
                         <!--输入框-->
                         <row1 style="margin-bottom:20px">
-                            <input id="x1" class="input" placeholder="第一个点x坐标">
-                            <input id="x2" class="input" placeholder="第一个点y坐标">
+                            <input id="x1_input" class="input" placeholder="第一个点x坐标">
+                            <input id="x2_input" class="input" placeholder="第一个点y坐标">
                         </row1>
 
                         <row2 style="margin-bottom:25px">
-                            <input id="y1" class="input" placeholder="第二个点x坐标">
-                            <input id="y2" class="input" placeholder="第二个点y坐标">
+                            <input id="y1_input" class="input" placeholder="第二个点x坐标">
+                            <input id="y2_input" class="input" placeholder="第二个点y坐标">
                         </row2>
 
                         <!--计算按钮-->
@@ -385,26 +385,26 @@
 
                         <p style="font-size:18px;margin-bottom:5px">计算结果</p>
 
-                        <button class="button_grey" id="result"></button>
+                        <button class="button_grey" id="result_output"></button>
 
                         <script>
                         //两点间距离计算函数
                         function distancecalculate(){
-                            let x1 = window.document.getElementById('x1').value;
-                            let x1_number = parseInt(x1);
-                            let x2 = window.document.getElementById('x2').value;
-                            let x2_number = parseInt(x2);
-                            let y1 = window.document.getElementById('y1').value;
-                            let y1_number = parseInt(y1);
-                            let y2 = window.document.getElementById('y2').value;
-                            let y2_number = parseInt(y2);
-                            let result_raw_x = x1_number - x2_number;
-                            let result_raw_y = y1_number - y2_number;
-                            let result_final_x = Math.pow(result_raw_x,2);
-                            let result_final_y = Math.pow(result_raw_y,2);
-                            let result_raw = result_final_x + result_final_y;
-                            let result_final = Math.sqrt(result_raw);
-                            result.innerText = result_final;
+                            let x1_input = window.document.getElementById('x1_input').value;
+                            let x1 = parseFloat(x1_input);
+                            let x2_input = window.document.getElementById('x2_input').value;
+                            let x2 = parseFloat(x2_input);
+                            let y1_input = window.document.getElementById('y1_input').value;
+                            let y1 = parseFloat(y1_input);
+                            let y2_input = window.document.getElementById('y2_input').value;
+                            let y2 = parseFloat(y2_input);
+                            let left = x1 - x2;
+                            let right = y1 - y2;
+                            let left_2 = Math.pow(left,2);
+                            let right_2 = Math.pow(right,2);
+                            let result = left_2 + right_2;
+                            let result_2 = Math.sqrt(result);
+                            result_output.innerText = result_2;
                         }
                         </script>
 
