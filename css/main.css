@@ -133,7 +133,6 @@
 }
 
 .hyperlink:hover {
-  color: #216cd3;
   text-decoration: none;
   border-bottom: 1.5px dashed;
 }
