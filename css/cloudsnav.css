@@ -165,6 +165,60 @@ nav_link_description {
   color: #ffffffdd;
 }
 
+/*纯文字板块*/
+.common {
+  margin: 30px;
+}
+
+/*纯文字板块の标题*/
+.common_title {
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffffdd;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #ffffffdd;
+}
+
+/*纯文字板块の二级标题*/
+.common_title_2 {
+  font-weight: bold;
+  font-size: 19px;
+  color: #ffffffdd;
+  margin-top: 50px;
+  margin-bottom: 8px;
+}
+
+/*纯文字板块の主体*/
+.common_text {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #ffffffdd;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+}
+
+/*“关于本站”页面の按钮*/
+.introduction_links {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1.5px solid #ffffffdd;
+  outline: none;
+  color: #ffffffdd;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-right: 10px;
+  width: auto;
+}
+
+.introduction_links:hover {
+  background-color: #ffffff24;
+  transition-duration: 0.2s;
+}
+
 /*移动端适配*/
 @media (max-width: 600px) {
   input {
