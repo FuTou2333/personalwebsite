@@ -1,0 +1,130 @@
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云中城云导航</title>
+  <link rel="icon" href="./assets/favicon2.ico">
+  <style>
+    @import url(./css/cloudsnav.css);
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <!--顶部导航条-->
+    <bar_top
+      style="display: flex;width: 100%;background:transparent;justify-content: space-between;align-items: center;padding-top: 5px;">
+
+      <bar_top_links style="display: flex;align-items: center;">
+        <a href="https://futou2333.github.io/personalwebsite/cloudsnav.html" class="bar_top_links">首页</a>
+        <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" class="bar_top_links">关于本站</a>
+      </bar_top_links>
+
+      <!--天气组件-->
+      <div id="he-plugin-simple"></div>
+      <script>
+        WIDGET = {
+          "CONFIG": {
+            "modules": "120",
+            "background": "5",
+            "tmpColor": "FFFFFF",
+            "tmpSize": "15",
+            "cityColor": "FFFFFF",
+            "citySize": "15",
+            "aqiColor": "FFFFFF",
+            "aqiSize": "15",
+            "weatherIconSize": "24",
+            "alertIconSize": "18",
+            "padding": "10px 10px 10px 10px",
+            "shadow": "1",
+            "language": "auto",
+            "borderRadius": "5",
+            "fixed": "false",
+            "vertical": "top",
+            "horizontal": "left",
+            "key": "b6d195a5e0914b56926451728acb6673"
+          }
+        }
+      </script>
+      <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+    </bar_top>
+
+    <!--桌宠-->
+    <div
+      style="display: flex;justify-content: center;margin-top: 40px;margin-bottom: 10px;position: fixed;bottom: 15px;right: 15px;">
+      <img src="./assets/edge.gif" style="width: 120px;height: auto;">
+    </div>
+
+    <nav>
+      <about class="common">
+
+        <about_title>
+          <p class="common_title">关于本站</p>
+        </about_title>
+
+        <about_text>
+
+          <p class="common_text">
+            欢迎来到云中城云导航站！
+            <br>
+            <br>
+            本站是一个小马主题的起始页兼导航站，是一位brony练习编程的项目
+            <br>
+            <br>
+            本项目仍在开发中！后续会加入更多功能，比如设置菜单（内含更换背景、更换桌宠、更换搜索引擎、自定义页面布局、投稿网站等，咕咕咕）
+          </p>
+
+          <div style="display:flex;flex-direction:row;margin-top: 30px;">
+            <a href="https://github.com/FuTou2333/personalwebsite" target="_blank" class="introduction_links">本站源码</a>
+            <a href="https://futou2333.github.io/personalwebsite/" target="_blank"
+              class="introduction_links">作者の个人网站</a>
+          </div>
+
+        </about_text>
+
+      </about>
+
+      <update_log class="common">
+
+        <update_log_title>
+          <p class="common_title">更新日志</p>
+        </update_log_title>
+
+        <update_log_text>
+
+          <p class="common_title_2">22w24a</p>
+
+          <p class="common_text">
+            · 所有基础功能均可使用
+            <br>
+            · 新增网站分类
+            <br>
+            · 新增时间显示
+            <br>
+            · 新增必应“每日一图”功能
+            <br>
+            · 更改桌宠的位置
+            <br>
+            · 新增天气组件
+            <br>
+            · 新增“关于本站”页面
+          </p>
+
+          <p class="common_title_2">22w23a</p>
+
+          <p class="common_text">
+            · 基本页面布局完成
+          </p>
+
+        </update_log_text>
+
+      </update_log>
+    </nav>
+
+</body>
+
+</html>
