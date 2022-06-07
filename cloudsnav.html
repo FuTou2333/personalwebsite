@@ -1,681 +1,496 @@
-<html lang="zh-CN"><head>
+<html lang="zh-CN">
+
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>云中城云导航</title>
   <link rel="icon" href="./assets/favicon2.ico">
   <style>
-
-body{
-  margin: 0;
-  display: flex;
-  background-image: url(https://api.kdcc.cn/img/);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 微软雅黑;
-  flex-direction: column;
-}
-
-.box{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-main{
-  display: flex;
-  background-color: #00000096;
-  padding: 10px;
-  flex-direction: column;
-  padding-bottom: 60px;
-  align-items: center;
-}
-
-nav{
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  background-color: #1e1e1e;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: #0000001f 0px 4px 20px;
-  min-height: 500px;
-}
-
-nav_links{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-nav_link{
-  display: flex;
-  flex-direction: column;
-  max-width: 250px;
-  background-color: #ffffff26;
-  color: #ffffffdd;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
-  min-height: 95px;
-  transition: 0.2s ease-in-out;
-  box-shadow: #0000001f 0px 4px 20px;
-}
-
-nav_link:hover{
-  background-color: #ffffff44;
-}
-
-nav_link_down{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-a{
-  text-decoration: none;
-}
-
-.icon{
-  height: 30px;
-  width: 30px;
-  margin-top: 13px;
-  margin-right: 11px;
-}
-
-nav_title{
-  font-size: 22px;
-  font-weight: bold;
-  color: #ffffffdd;
-  margin: 14px;
-  margin-bottom: 3px;
-  margin-top: 50px;
-}
-
-nav_link_title_1{
-  font-weight: bold;
-  margin-left: -8px;
-  color: #cfcfd3;
-}
-
-nav_link_title_2{
-  font-weight: bold;
-  margin-left: -8px;
-  color: #f7fbbb;
-}
-
-nav_link_title_3{
-  font-weight: bold;
-  margin-left: -8px;
-  color: #f2bed7;
-}
-
-nav_link_title_4{
-  font-weight: bold;
-  margin-left: -8px;
-  color: #d5abe2;
-}
-
-nav_link_title_5{
-  font-weight: bold;
-  margin-left: -8px;
-  color: #a3defb;
-}
-
-nav_link_title_6{
-  font-weight: bold;
-  margin-left: -8px;
-  color: #f0c480;
-}
-
-nav_link_description{
-  font-size: 12px;
-  display: flex;
-  font-weight: bold;
-  color: #ffffffdd;
-}
-
-input{
-  width: 500px;
-  border: none;
-  border-radius: 5px;
-  height: 40px;
-  background-color: #ffffff;
-  padding-left: 35px;
-  padding-right: 35px;
-  font-size: 16px;
-  box-shadow: #0000001f 0px 4px 20px;
-  transition: 0.2s ease-in-out;
-}
-
-input:focus{
-  width: 550px;
-  outline: none;
-  transition: 0.2s ease-in-out;
-}
-
-.bar_top_links {
-  color: #ffffffdd;
-  display: flex;
-  text-decoration: none;
-  transition-duration: 0.2s;
-  height: 35px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
-  background: transparent;
-  align-items: center;
-}
-
-.bar_top_links:hover {
-  transition: 0.2s ease-in-out;
-  background-color: #ffffff37;
-}
-
-nav_select{
-  display:flex;
-  flex-direction:row;
-  height: auto;
-  width: 60%;
-  margin-left: -29px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-  padding-top: 10px;
-}
-
-choice{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-button{
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-select{
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-@media (max-width:600px) {
-  input{
-  width: 100%;
-}
-  input:focus{
-  width:100%;
-}
-  nav{
-  width: 90%;
-}
-  nav_select{
-  width: 90%;
-}
-}
-
+    @import url(./css/cloudsnav.css);
   </style>
 </head>
+
 <body>
 
   <main>
-    <bar_top style="display: flex;width: 100%;background:transparent;justify-content: space-between;align-items: center;padding-top: 5px;">
-  
-<bar_top_links style="display: flex;align-items: center;">
-    <a href="#nav" class="bar_top_links">导航</a>
-    <a href="" class="bar_top_links">关于本站</a>
-</bar_top_links>
 
-<div id="he-plugin-simple"></div>
-<script>
-WIDGET = {
-  "CONFIG": {
-    "modules": "120",
-    "background": "5",
-    "tmpColor": "FFFFFF",
-    "tmpSize": "15",
-    "cityColor": "FFFFFF",
-    "citySize": "15",
-    "aqiColor": "FFFFFF",
-    "aqiSize": "15",
-    "weatherIconSize": "24",
-    "alertIconSize": "18",
-    "padding": "10px 10px 10px 10px",
-    "shadow": "1",
-    "language": "auto",
-    "borderRadius": "5",
-    "fixed": "false",
-    "vertical": "top",
-    "horizontal": "left",
-    "key": "b6d195a5e0914b56926451728acb6673"
-  }
-}
-</script>
-<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
-  </bar_top>
-    <div style="display: flex;justify-content: center;margin-top: 40px;margin-bottom: 10px;position: fixed;bottom: 15px;right: 15px;">
-    <img src="./assets/edge.gif" style="width: 120px;height: auto;">
-  </div>
-  <p id="displayDate" style="color:white;font-size: 35px;margin-top: 60px;margin-bottom: 25px;">00:00</p>
-<script>
-  function getDate() {
-  let date_raw = Date();
-  let date = date_raw.slice(16,21)
-  document.getElementById("displayDate").innerHTML=date;
-}
-setInterval("getDate()",1000);
-    </script>
-    <form action="https://www.baidu.com/s" target="_blank" method="get">
-    <div style="display: flex;justify-content: center;align-items:center;margin-bottom: 100px;">
-<span style="position: relative;left: 31px;">
-  <img src="./assets/baidu.png" style="height:25px;width:25px;"></span>
-<input type="text" name="wd" placeholder="搜索">
-<button type="submit" style="position: relative;right: 31px;">
-  <img src="./assets/search.png" style="height:25px;width:25px;">
+    <!--顶部导航条-->
+    <bar_top
+      style="display: flex;width: 100%;background:transparent;justify-content: space-between;align-items: center;padding-top: 5px;">
+
+      <bar_top_links style="display: flex;align-items: center;">
+        <a href="#nav" class="bar_top_links">导航</a>
+        <a href="" class="bar_top_links">关于本站</a>
+      </bar_top_links>
+
+      <!--天气组件-->
+      <div id="he-plugin-simple"></div>
+      <script>
+        WIDGET = {
+          "CONFIG": {
+            "modules": "120",
+            "background": "5",
+            "tmpColor": "FFFFFF",
+            "tmpSize": "15",
+            "cityColor": "FFFFFF",
+            "citySize": "15",
+            "aqiColor": "FFFFFF",
+            "aqiSize": "15",
+            "weatherIconSize": "24",
+            "alertIconSize": "18",
+            "padding": "10px 10px 10px 10px",
+            "shadow": "1",
+            "language": "auto",
+            "borderRadius": "5",
+            "fixed": "false",
+            "vertical": "top",
+            "horizontal": "left",
+            "key": "b6d195a5e0914b56926451728acb6673"
+          }
+        }
+      </script>
+      <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+    </bar_top>
+
+    <!--桌宠-->
+    <div
+      style="display: flex;justify-content: center;margin-top: 40px;margin-bottom: 10px;position: fixed;bottom: 15px;right: 15px;">
+      <img src="./assets/edge.gif" style="width: 120px;height: auto;">
     </div>
-  </form>
 
+    <!--时间显示-->
+    <p id="displayDate" style="color:white;font-size: 35px;margin-top: 60px;margin-bottom: 25px;">00:00</p>
+
+    <!--时间显示js-->
+    <script>
+      function getDate() {
+        let date_raw = Date();
+        let date = date_raw.slice(16, 21)
+        document.getElementById("displayDate").innerHTML = date;
+      }
+      setInterval("getDate()", 1000);
+    </script>
+
+    <!--搜索框-->
+    <form action="https://www.baidu.com/s" target="_blank">
+      <div style="display: flex;justify-content: center;align-items:center;margin-bottom: 100px;">
+        <!--搜索引擎按钮-->
+        <span style="position: relative;left: 31px;">
+          <img src="./assets/baidu.png" style="height:25px;width:25px;">
+        </span>
+        <!--输入框-->
+        <input type="text" name="wd" placeholder="搜索">
+        <!--搜索按钮-->
+        <button type="submit" style="position: relative;right: 31px;">
+          <img src="./assets/search.png" style="height:25px;width:25px;">
+      </div>
+    </form>
+
+    <!--导航分类-->
     <nav_select id="nav">
-<a class="bar_top_links" id="quanBu_button" onclick="change_quanBu();check()">全部</a>
-<a class="bar_top_links" id="zongHe_button" onclick="change_zongHe();check()">综合</a>
-<a class="bar_top_links" id="daoHang_button" onclick="change_daoHang();check()">导航</a>
-<a class="bar_top_links" id="baiKe_button" onclick="change_baiKe();check()">百科</a>
-<a class="bar_top_links" id="lunTan_button" onclick="change_lunTan();check()">论坛</a>
-<a class="bar_top_links" id="xiaoShuo_button" onclick="change_xiaoShuo();check()">小说</a>
-<a class="bar_top_links" id="tuPian_button" onclick="change_tuPian();check()">图片</a>
-<a class="bar_top_links" id="youXi_button" onclick="change_youXi();check()">游戏</a>
-<a class="bar_top_links" id="yinYue_button" onclick="change_yinYue();check()">音乐</a>
-<a class="bar_top_links" id="gongJu_button" onclick="change_gongJu();check()">工具</a>
+      <a class="bar_top_links" id="quanBu_button" onclick="change_quanBu();check()">全部</a>
+      <a class="bar_top_links" id="zongHe_button" onclick="change_zongHe();check()">综合</a>
+      <a class="bar_top_links" id="daoHang_button" onclick="change_daoHang();check()">导航</a>
+      <a class="bar_top_links" id="baiKe_button" onclick="change_baiKe();check()">百科</a>
+      <a class="bar_top_links" id="lunTan_button" onclick="change_lunTan();check()">论坛</a>
+      <a class="bar_top_links" id="xiaoShuo_button" onclick="change_xiaoShuo();check()">小说</a>
+      <a class="bar_top_links" id="tuPian_button" onclick="change_tuPian();check()">图片</a>
+      <a class="bar_top_links" id="youXi_button" onclick="change_youXi();check()">游戏</a>
+      <a class="bar_top_links" id="yinYue_button" onclick="change_yinYue();check()">音乐</a>
+      <a class="bar_top_links" id="gongJu_button" onclick="change_gongJu();check()">工具</a>
     </nav_select>
 
+    <!--导航-->
     <nav>
 
-    <nav_links>
+      <!--导航链接-->
+      <nav_links>
 
-<choice id="zongHe">
+        <!--综合类-->
+        <choice id="zongHe">
 
-  <a href="https://mylittlepony.hasbro.com/worldwide" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【mlp官网】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/hasbro.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>一定要进英文官网，中文官网就一推销玩具的</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+          <a href="https://mylittlepony.hasbro.com/worldwide" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【mlp官网】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/hasbro.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>一定要进英文官网，中文官网就一推销玩具的</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-    <a href="https://www.bilibili.com/bangumi/media/md2668/" target="_blank">
-<nav_link>
-  <nav_link_up>
-    <nav_link_title_1>【在bilibili观看】</nav_link_title_1>
-  </nav_link_up>
-  <nav_link_down>
-    <nav_link_img>
-    <img src="./assets/bilibili.png" class="icon">
-    </nav_link_img>
-    <nav_link_description>
-<p>有弹幕看起来更爽</p>
-    </nav_link_description>
-  </nav_link_down>
-</nav_link>
-</a>
+          <a href="https://www.bilibili.com/bangumi/media/md2668/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【在bilibili观看】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/bilibili.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>有弹幕看起来更爽</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-<a href="https://www.equestriacn.com/" target="_blank">
-  <nav_link>
-    <nav_link_up>
-<nav_link_title_1>【小马中国】</nav_link_title_1>
-    </nav_link_up>
-    <nav_link_down>
-<nav_link_img>
-<img src="./assets/eqcn.png" class="icon">
-</nav_link_img>
-<nav_link_description>
-  <p>EquestriaCN,又称EqCN,是一个致力于广大小马爱好者(Brony)们提供新闻的共同资讯平台。</p>
-</nav_link_description>
-    </nav_link_down>
-  </nav_link>
-  </a>
+          <a href="https://www.equestriacn.com/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【小马中国】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/eqcn.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>EquestriaCN,又称EqCN,是一个致力于广大小马爱好者(Brony)们提供新闻的共同资讯平台。</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  <a href="http://equestria.ponysky.net/home/" target="_blank">
-  <nav_link>
-    <nav_link_up>
-<nav_link_title_1>【小马国空间联合国】</nav_link_title_1>
-    </nav_link_up>
-    <nav_link_down>
-<nav_link_img>
-<img src="./assets/ponysky.png" class="icon">
-</nav_link_img>
-<nav_link_description>
-  <p>“飞马天文观测站”的一个项目，可以录入小马国公民身份信息</p>
-</nav_link_description>
-    </nav_link_down>
-  </nav_link>
-  </a>
+          <a href="http://equestria.ponysky.net/home/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【小马国空间联合国】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/ponysky.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>“飞马天文观测站”的一个项目，可以录入小马国公民身份信息</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-</choice>
+        </choice>
 
-<choice id="daoHang">
+        <!--导航类-->
+        <choice id="daoHang">
 
-  <a href="https://canterlot.site/" target="_blank" id="ts">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【坎特洛特-交通枢纽】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/canterlot.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>一个极全的导航网站，小马国虚拟世界的输导组织（就是网不太好）</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+          <a href="https://canterlot.site/" target="_blank" id="ts">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【坎特洛特-交通枢纽】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/canterlot.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>一个极全的导航网站，小马国虚拟世界的输导组织（就是网不太好）</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-    <a href="http://equestria.ponysky.net/ep/gmyzt.html" target="_blank">
-<nav_link>
-  <nav_link_up>
-    <nav_link_title_1>【小马国公民一站通】</nav_link_title_1>
-  </nav_link_up>
-  <nav_link_down>
-    <nav_link_img>
-    <img src="./assets/ponysky.png" class="icon">
-    </nav_link_img>
-    <nav_link_description>
-<p>“小马国空间联合国”的一个导航网站</p>
-    </nav_link_description>
-  </nav_link_down>
-</nav_link>
-</a>
+          <a href="http://equestria.ponysky.net/ep/gmyzt.html" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【小马国公民一站通】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/ponysky.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>“小马国空间联合国”的一个导航网站</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-    </choice>
+        </choice>
 
-<choice id="baiKe">
+        <!--百科类-->
+        <choice id="baiKe">
 
-  <a href="https://zh.moegirl.org.cn/index.php?title=%E5%BD%A9%E8%99%B9%E5%B0%8F%E9%A9%AC" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【萌娘百科页面】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/mnbk.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>往下翻，很精彩</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+          <a href="https://zh.moegirl.org.cn/index.php?title=%E5%BD%A9%E8%99%B9%E5%B0%8F%E9%A9%AC" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【萌娘百科页面】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/mnbk.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>往下翻，很精彩</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-    <a href="https://baike.baidu.com/item/%E5%B0%8F%E9%A9%AC%E5%AE%9D%E8%8E%89/3883100" target="_blank">
-<nav_link>
-  <nav_link_up>
-    <nav_link_title_1>【百度百科页面】</nav_link_title_1>
-  </nav_link_up>
-  <nav_link_down>
-    <nav_link_img>
-    <img src="./assets/baidu.png" class="icon">
-    </nav_link_img>
-    <nav_link_description>
-<p>众所周知</p>
-    </nav_link_description>
-  </nav_link_down>
-</nav_link>
-</a>
-    
-<a href="https://mlp.huijiwiki.com/wiki/MLP%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA" target="_blank">
-  <nav_link>
-    <nav_link_up>
-<nav_link_title_1>【灰机wiki页面】</nav_link_title_1>
-    </nav_link_up>
-    <nav_link_down>
-<nav_link_img><img src="./assets/hjwiki.png" class="icon">
-</nav_link_img>
-<nav_link_description>
-  <p>剧集介绍很棒</p>
-</nav_link_description>
-    </nav_link_down>
-  </nav_link>
-  </a>
-    
-  <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【Fandom页面】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/fandom.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>条目最全</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+          <a href="https://baike.baidu.com/item/%E5%B0%8F%E9%A9%AC%E5%AE%9D%E8%8E%89/3883100" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【百度百科页面】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/baidu.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>众所周知</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  </choice>
+          <a href="https://mlp.huijiwiki.com/wiki/MLP%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【灰机wiki页面】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img><img src="./assets/hjwiki.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>剧集介绍很棒</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-<choice id="lunTan">
+          <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【Fandom页面】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/fandom.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>条目最全</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  <a href="https://tieba.baidu.com/f?kw=%E5%B0%8F%E9%A9%AC%E5%AE%9D%E8%8E%89&amp;ie=utf-8" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【百度贴吧】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/baidu.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>看，新贴！</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+        </choice>
 
-  </choice>
+        <!--论坛类-->
+        <choice id="lunTan">
 
-<choice id="xiaoShuo">
+          <a href="https://tieba.baidu.com/f?kw=%E5%B0%8F%E9%A9%AC%E5%AE%9D%E8%8E%89&amp;ie=utf-8" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【百度贴吧】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/baidu.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>看，新贴！</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  <a href="https://www.fimtale.com/" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【FimTale】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/fimtale.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>中文小马同人小说网站</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
-  
-    <a href="https://www.fimfiction.net/" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【FimFiction】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/fimfiction.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>英文小马同人小说网站</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+        </choice>
 
-  </choice>
+        <choice id="xiaoShuo">
 
-<choice id="tuPian">
+          <a href="https://www.fimtale.com/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【FimTale】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/fimtale.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>中文小马同人小说网站</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  <a href="https://derpibooru.org/" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【Derpibooru】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/derpibooru.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>又称呆站，在这里能找到不少优质同人图！</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+          <a href="https://www.fimfiction.net/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【FimFiction】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/fimfiction.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>英文小马同人小说网站</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  </choice>
+        </choice>
 
-<choice id="youXi">
+        <!--图片类-->
+        <choice id="tuPian">
 
-  <a href="https://pony.town/" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【Pony Town】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/ponytown.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>《小马镇》，面向全球的线上虚拟社交游戏</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
-  
-    <a href="https://ambientproject.net/" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【Ambient White】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/ambientwhite.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>民间翻译《冬日传说》，画质最高的小马同人游戏之一，基于虚幻引擎</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
-  
-    <a href="http://foe.ucoz.org/main_en.html" target="_blank">
-<nav_link>
-  <nav_link_up>
-    <nav_link_title_1>【Fallout Equestria: REMAINS】</nav_link_title_1>
-  </nav_link_up>
-  <nav_link_down>
-    <nav_link_img>
-    <img src="./assets/foe.png" class="icon">
-    </nav_link_img>
-    <nav_link_description>
-<p>《辐射小马国:废墟》，2D射击+RPG游戏</p>
-    </nav_link_description>
-  </nav_link_down>
-</nav_link>
-</a>
-  
-<a href="https://minelittlepony-mod.com/" target="_blank">
-  <nav_link>
-    <nav_link_up>
-<nav_link_title_1>【Mine Little Pony Mod】</nav_link_title_1>
-    </nav_link_up>
-    <nav_link_down>
-<nav_link_img>
-<img src="./assets/mlpmod.png" alt="mlpmod" class="icon">
-</nav_link_img>
-<nav_link_description>
-  <p>可以让你在MC里变成小马的Mod，基于Fabric</p>
-</nav_link_description>
-    </nav_link_down>
-  </nav_link>
-  </a>
+          <a href="https://derpibooru.org/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【Derpibooru】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/derpibooru.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>又称呆站，在这里能找到不少优质同人图！</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-</choice>
+        </choice>
 
-<choice id="yinYue">
+        <!--游戏类-->
+        <choice id="youXi">
 
-  <a href="https://ponyvillefm.com/" target="_blank">
-    <nav_link>
-<nav_link_up>
-  <nav_link_title_1>【PonyvilleFM】</nav_link_title_1>
-</nav_link_up>
-<nav_link_down>
-  <nav_link_img>
-  <img src="./assets/ponyvillefm.png" class="icon">
-  </nav_link_img>
-  <nav_link_description>
-    <p>马镇电台</p>
-  </nav_link_description>
-</nav_link_down>
-    </nav_link>
-    </a>
+          <a href="https://pony.town/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【Pony Town】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/ponytown.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>《小马镇》，面向全球的线上虚拟社交游戏</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-  </choice>
+          <a href="https://ambientproject.net/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【Ambient White】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/ambientwhite.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>民间翻译《冬日传说》，画质最高的小马同人游戏之一，基于虚幻引擎</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-<choice id="gongJu">
+          <a href="http://foe.ucoz.org/main_en.html" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【Fallout Equestria: REMAINS】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/foe.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>《辐射小马国:废墟》，2D射击+RPG游戏</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-    <a href="https://software.little.my/" target="_blank">
-<nav_link>
-  <nav_link_up>
-    <nav_link_title_1>【My Little Software】</nav_link_title_1>
-  </nav_link_up>
-  <nav_link_down>
-    <nav_link_img>
-    <img src="./assets/mylittlesoftware.png" class="icon">
-    </nav_link_img>
-    <nav_link_description>
-<p>《我的小软件，编程是魔法》小马程序汇总</p>
-    </nav_link_description>
-  </nav_link_down>
-</nav_link>
-</a>
+          <a href="https://minelittlepony-mod.com/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【Mine Little Pony Mod】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/mlpmod.png" alt="mlpmod" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>可以让你在MC里变成小马的Mod，基于Fabric</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-<a href="https://15.ai/" target="_blank">
-  <nav_link>
-    <nav_link_up>
-<nav_link_title_1>【15.ai】</nav_link_title_1>
-    </nav_link_up>
-    <nav_link_down>
-<nav_link_img>
-<img src="./assets/15ai.png" class="icon">
-</nav_link_img>
-<nav_link_description>
-  <p>很牛的ai配音网站，同人作者福利</p>
-</nav_link_description>
-    </nav_link_down>
-  </nav_link>
-  </a>
+        </choice>
 
-    </choice>
+        <!--音乐类-->
+        <choice id="yinYue">
 
-    </nav_links>
+          <a href="https://ponyvillefm.com/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【PonyvilleFM】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/ponyvillefm.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>马镇电台</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
 
-    <script src="./js/selectNav.js"></script>
+        </choice>
 
-</body></html>
+        <!--工具类-->
+        <choice id="gongJu">
+
+          <a href="https://software.little.my/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【My Little Software】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/mylittlesoftware.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>《我的小软件，编程是魔法》小马程序汇总</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
+
+          <a href="https://15.ai/" target="_blank">
+            <nav_link>
+              <nav_link_up>
+                <nav_link_title>【15.ai】</nav_link_title>
+              </nav_link_up>
+              <nav_link_down>
+                <nav_link_img>
+                  <img src="./assets/15ai.png" class="icon">
+                </nav_link_img>
+                <nav_link_description>
+                  <p>很牛的ai配音网站，同人作者福利</p>
+                </nav_link_description>
+              </nav_link_down>
+            </nav_link>
+          </a>
+
+        </choice>
+
+      </nav_links>
+
+      <!--导入导航js-->
+      <script src="./js/selectNav.js"></script>
+
+</body>
+
+</html>
