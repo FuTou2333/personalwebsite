@@ -1,3 +1,4 @@
+//将磁贴元素存入变量
 let quanBu= document.getElementById('quanBu');
 let zongHe= document.getElementById('zongHe');
 let daoHang= document.getElementById('daoHang');
@@ -8,6 +9,7 @@ let tuPian= document.getElementById('tuPian');
 let youXi= document.getElementById('youXi');
 let yinYue= document.getElementById('yinYue');
 let gongJu= document.getElementById('gongJu');
+//与导航分类按钮绑定的函数
 function change_quanBu(){
   choice = 'quanBu';
 }
@@ -38,7 +40,9 @@ function change_yinYue(){
 function change_gongJu(){
   choice = 'gongJu';
 }
+//检查函数
 function check(){
+  //先每次重置样式
   quanBu_button.style.background = 'transparent'
   zongHe.style.display = 'none';
   zongHe_button.style.background = 'transparent'
@@ -58,6 +62,7 @@ function check(){
   yinYue_button.style.background = 'transparent'
   gongJu.style.display = 'none';
   gongJu_button.style.background = 'transparent'
+  //再根据choice变量应用对应的样式
   if (choice === 'quanBu'){
     quanBu_button.style.backgroundColor = '#ffffff37';
     zongHe.style.display = 'flex';
