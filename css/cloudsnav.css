@@ -1,0 +1,220 @@
+/*身体*/
+body {
+  margin: 0;
+  display: flex;
+  background-image: url(https://api.kdcc.cn/img/);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 微软雅黑;
+  flex-direction: column;
+}
+
+/*页面主体*/
+main {
+  display: flex;
+  background-color: #00000096;
+  padding: 10px;
+  flex-direction: column;
+  padding-bottom: 60px;
+  align-items: center;
+}
+
+/*超链接*/
+a {
+  text-decoration: none;
+}
+
+/*输入框*/
+input {
+  width: 500px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #ffffff;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 16px;
+  box-shadow: #0000001f 0px 4px 20px;
+  transition: 0.2s ease-in-out;
+}
+
+input:focus {
+  width: 550px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+/*按钮*/
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*顶部导航条の链接（下面的导航分类也在用）*/
+.bar_top_links {
+  color: #ffffffdd;
+  display: flex;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  align-items: center;
+}
+
+.bar_top_links:hover {
+  transition: 0.2s ease-in-out;
+  background-color: #ffffff37;
+}
+
+/*导航分类区*/
+nav_select {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 60%;
+  margin-left: -29px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  padding-top: 10px;
+}
+
+/*导航主区*/
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: #0000001f 0px 4px 20px;
+  min-height: 500px;
+}
+
+/*导航の链接部分*/
+nav_links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*导航的一个类*/
+choice {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*磁贴*/
+nav_link {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  background-color: #ffffff26;
+  color: #ffffffdd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  min-height: 95px;
+  transition: 0.2s ease-in-out;
+  box-shadow: #0000001f 0px 4px 20px;
+}
+
+nav_link:hover {
+  background-color: #ffffff44;
+}
+
+/*磁贴标题*/
+nav_link_title {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #cfcfd3;
+}
+
+/*磁贴下半部分*/
+nav_link_down {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/*磁贴图标*/
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-top: 13px;
+  margin-right: 11px;
+}
+
+/*磁贴介绍*/
+nav_link_description {
+  font-size: 12px;
+  display: flex;
+  font-weight: bold;
+  color: #ffffffdd;
+}
+
+/*移动端适配*/
+@media (max-width: 600px) {
+  input {
+    width: 100%;
+  }
+  input:focus {
+    width: 100%;
+  }
+  nav {
+    width: 90%;
+  }
+  nav_select {
+    width: 90%;
+  }
+}
+
+/*
+nav_link_title_1 {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #cfcfd3;
+}
+
+nav_link_title_2 {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #f7fbbb;
+}
+
+nav_link_title_3 {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #f2bed7;
+}
+
+nav_link_title_4 {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #d5abe2;
+}
+
+nav_link_title_5 {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #a3defb;
+}
+
+nav_link_title_6 {
+  font-weight: bold;
+  margin-left: -8px;
+  color: #f0c480;
+}
+*/
