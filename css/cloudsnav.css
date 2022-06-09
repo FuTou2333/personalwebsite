@@ -129,6 +129,7 @@ nav_link {
   min-height: 95px;
   transition: 0.2s ease-in-out;
   box-shadow: #0000001f 0px 4px 20px;
+  width: 250px;
 }
 
 nav_link:hover {
