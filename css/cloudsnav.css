@@ -71,6 +71,8 @@ button {
   cursor: pointer;
   background: transparent;
   align-items: center;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
 .bar_top_links:hover {
@@ -83,18 +85,17 @@ nav_select {
   display: flex;
   flex-direction: row;
   height: auto;
-  width: 60%;
-  margin-left: -29px;
+  width: 650px;
   flex-wrap: wrap;
   margin-bottom: 8px;
-  padding-top: 10px;
+  justify-content: center;
 }
 
 /*导航主区*/
 nav {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 800px;
   background-color: #1e1e1e;
   border-radius: 5px;
   padding: 10px;
@@ -105,62 +106,66 @@ nav {
 /*导航の链接部分*/
 nav_links {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
 /*导航的一个类*/
 choice {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
 }
 
-/*磁贴*/
+/*导航卡片*/
 nav_link {
   display: flex;
-  flex-direction: column;
-  max-width: 250px;
+  flex-direction: row;
+  align-items: center;
   background-color: #ffffff26;
   color: #ffffffdd;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
   transition: 0.2s ease-in-out;
-  box-shadow: #0000001f 0px 4px 20px;
-  height: 90px;
-  width: 250px;
+  width: 285px;
+  height: 60px;
 }
 
 nav_link:hover {
   background-color: #ffffff44;
 }
 
-/*磁贴标题*/
+/*导航卡片标题*/
 nav_link_title {
+  font-size: 18px;
   font-weight: bold;
-  margin-left: -9px;
+  margin-bottom: 5px;
 }
 
-/*磁贴下半部分*/
-nav_link_down {
+/*导航卡片下半部分*/
+nav_link_right {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
 }
 
-/*磁贴图标*/
+/*导航卡片图标*/
 .icon {
-  height: 30px;
-  width: 30px;
-  margin-top: 1em;
-  margin-right: 11px;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
-/*磁贴介绍*/
+/*导航卡片介绍*/
 nav_link_description {
-  font-size: 12px;
-  color: #ffffffdd;
+  font-size: 13px;
+  color: #ffffff92;
 }
 
 /*纯文字板块*/
@@ -180,23 +185,22 @@ nav_link_description {
 /*纯文字板块の二级标题*/
 .common_title_2 {
   font-weight: bold;
-  font-size: 19px;
+  font-size: 21px;
   color: #ffffffdd;
-  margin-top: 50px;
   margin-bottom: 8px;
 }
 
 /*纯文字板块の主体*/
 .common_text {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 16px;
   color: #ffffffdd;
   line-height: 1.4;
   letter-spacing: 0.8px;
 }
 
 /*“关于本站”页面の按钮*/
-.introduction_links {
+.about_button {
   display: flex;
   align-items: center;
   background: transparent;
@@ -212,9 +216,19 @@ nav_link_description {
   width: auto;
 }
 
-.introduction_links:hover {
+.about_button:hover {
   background-color: #ffffff24;
   transition-duration: 0.2s;
+}
+
+/*更新日志の一个版本*/
+version {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #ffffff26;
+  padding: 20px;
 }
 
 /*移动端适配*/
@@ -230,6 +244,15 @@ nav_link_description {
   }
   nav_select {
     width: 90%;
+  }
+  .bar_top_links:hover {
+    background-color: #ffffff26;
+  }
+  nav_link:hover {
+    background-color: #ffffff26;
+  }
+  .about_button:hover {
+    background-color: #ffffff26;
   }
 }
 
