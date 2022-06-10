@@ -214,6 +214,8 @@ nav_link_description {
   cursor: pointer;
   margin-right: 10px;
   width: auto;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
 .about_button:hover {
@@ -225,7 +227,7 @@ nav_link_description {
 version {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   background-color: #ffffff26;
   padding: 20px;
