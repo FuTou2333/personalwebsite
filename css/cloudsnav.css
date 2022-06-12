@@ -189,6 +189,13 @@ nav_link_description {
   margin-bottom: 8px;
 }
 
+/*纯文字板块の三级标题（更新日志日期）*/
+.common_title_3 {
+  font-size: 15px;
+  color: #ffffff8f;
+  margin-bottom: 8px;
+}
+
 /*纯文字板块の主体*/
 .common_text {
   margin-top: 10px;
