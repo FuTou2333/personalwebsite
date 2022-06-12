@@ -32,7 +32,7 @@ input {
   border: none;
   border-radius: 5px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: #ffffffdd;
   padding-left: 35px;
   padding-right: 35px;
   font-size: 16px;
@@ -184,7 +184,6 @@ nav_link_description {
 
 /*纯文字板块の二级标题*/
 .common_title_2 {
-  font-weight: bold;
   font-size: 21px;
   color: #ffffffdd;
   margin-bottom: 8px;
