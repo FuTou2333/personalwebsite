@@ -185,7 +185,7 @@ nav_link_description {
 /*纯文字板块の二级标题*/
 .common_title_2 {
   display: flex;
-  font-size: 21px;
+  font-size: 23px;
   color: #ffffffdd;
   margin-bottom: 8px;
   justify-content: space-between;
