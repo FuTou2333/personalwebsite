@@ -2,7 +2,7 @@
 body {
   margin: 0;
   display: flex;
-  background-image: url(https://api.kdcc.cn/img/);
+  background-image: url(https://api.kdcc.cn/img);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -26,8 +26,8 @@ a {
   text-decoration: none;
 }
 
-/*输入框*/
-input {
+/*搜索引擎*/
+.searchEngine {
   width: 500px;
   border: none;
   border-radius: 5px;
@@ -40,7 +40,7 @@ input {
   transition: 0.2s ease-in-out;
 }
 
-input:focus {
+.searchEngine:focus {
   width: 550px;
   outline: none;
   transition: 0.2s ease-in-out;
@@ -272,31 +272,26 @@ nav_link_title_1 {
   margin-left: -8px;
   color: #cfcfd3;
 }
-
 nav_link_title_2 {
   font-weight: bold;
   margin-left: -8px;
   color: #f7fbbb;
 }
-
 nav_link_title_3 {
   font-weight: bold;
   margin-left: -8px;
   color: #f2bed7;
 }
-
 nav_link_title_4 {
   font-weight: bold;
   margin-left: -8px;
   color: #d5abe2;
 }
-
 nav_link_title_5 {
   font-weight: bold;
   margin-left: -8px;
   color: #a3defb;
 }
-
 nav_link_title_6 {
   font-weight: bold;
   margin-left: -8px;
