@@ -72,7 +72,7 @@ button {
   background: transparent;
   align-items: center;
   /*为了让手机端点击不出现蓝色高光*/
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .bar_top_links:hover {
@@ -109,7 +109,7 @@ nav_links {
   flex-wrap: wrap;
   flex-direction: row;
   /*为了让手机端点击不出现蓝色高光*/
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /*导航的一个类*/
@@ -223,7 +223,7 @@ nav_link_description {
   margin-right: 10px;
   width: auto;
   /*为了让手机端点击不出现蓝色高光*/
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .about_button:hover {
@@ -246,21 +246,28 @@ version {
   .searchEngine {
     width: 100%;
   }
+
   .searchEngine:focus {
     width: 100%;
   }
+
   nav {
     width: 90%;
   }
+
   nav_select {
     width: 90%;
   }
+
+  /*把hover的颜色设为原来的，相当于没有*/
   .bar_top_links:hover {
     background-color: #ffffff26;
   }
+
   nav_link:hover {
     background-color: #ffffff26;
   }
+
   .about_button:hover {
     background-color: #ffffff26;
   }
