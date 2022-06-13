@@ -243,10 +243,10 @@ version {
 
 /*移动端适配*/
 @media (max-width: 600px) {
-  input {
+  .searchEngine {
     width: 100%;
   }
-  input:focus {
+  .searchEngine:focus {
     width: 100%;
   }
   nav {
