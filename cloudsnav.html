@@ -59,8 +59,7 @@
     <!--时间显示js-->
     <script>
       function getTime() {
-        let time_raw = Date();
-        let time = time_raw.slice(16, 21)
+        let time = Date().slice(16, 21);
         document.getElementById("displayTime").innerHTML = time;
       }
       setInterval("getTime()", 1000);
