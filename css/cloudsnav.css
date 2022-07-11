@@ -2,7 +2,7 @@
 body {
   margin: 0;
   display: flex;
-  background-image: url(https://api.kdcc.cn/img);
+  background-image: url(https://api.mfstudio.cc/bing/);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,7 +15,6 @@ body {
 main {
   display: flex;
   background-color: #00000096;
-  padding: 10px;
   flex-direction: column;
   padding-bottom: 60px;
   align-items: center;
@@ -46,17 +45,52 @@ a {
   transition: 0.2s ease-in-out;
 }
 
-/*按钮*/
-button {
+/*搜索按钮*/
+.searchEngine_button {
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
 
-/*顶部导航条の链接（下面的导航分类也在用）*/
+/*顶部导航条*/
+bar_top {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*顶部导航条の按钮*/
 .bar_top_links {
-  color: #ffffffdd;
+  color: #ffffff;
+  display: flex;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  align-items: center;
+  justify-content: center;
+}
+
+.bar_top_links:hover {
+  transition: 0.1s ease-in-out;
+  background-color: #ffffff37;
+}
+
+/*导航分类按钮*/
+.nav_select_links {
+  color: #ffffff;
   display: flex;
   text-decoration: none;
   transition: 0.1s ease-in-out;
@@ -75,7 +109,7 @@ button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.bar_top_links:hover {
+.nav_select_links:hover {
   transition: 0.1s ease-in-out;
   background-color: #ffffff37;
 }
@@ -127,7 +161,7 @@ nav_link {
   flex-direction: row;
   align-items: center;
   background-color: #ffffff12;
-  color: #ffffffdd;
+  color: #ffffff;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
@@ -178,16 +212,16 @@ nav_link_description {
 .common_title {
   font-weight: bold;
   font-size: 25px;
-  color: #ffffffdd;
+  color: #ffffff;
   padding-bottom: 8px;
-  border-bottom: 4px solid #ffffffdd;
+  border-bottom: 4px solid #ffffff;
 }
 
 /*纯文字板块の二级标题*/
 .common_title_2 {
   display: flex;
   font-size: 23px;
-  color: #ffffffdd;
+  color: #ffffff;
   margin-bottom: 8px;
   justify-content: space-between;
 }
@@ -203,7 +237,7 @@ nav_link_description {
 .common_text {
   margin-top: 10px;
   font-size: 16px;
-  color: #ffffffdd;
+  color: #ffffff;
   line-height: 1.4;
   letter-spacing: 0.8px;
 }
@@ -213,9 +247,9 @@ nav_link_description {
   display: flex;
   align-items: center;
   background: transparent;
-  border: 1.5px solid #ffffffdd;
+  border: 1.5px solid #ffffff;
   outline: none;
-  color: #ffffffdd;
+  color: #ffffff;
   border-radius: 5px;
   font-size: 16px;
   padding: 10px;
@@ -242,6 +276,68 @@ version {
   padding: 20px;
 }
 
+/*设置菜单*/
+settings {
+  display: none;
+  z-index:99;
+  flex-direction: column;
+  background-color: #1e1e1ef0;
+  border-radius: 5px;
+  width: auto;
+  box-shadow: #0000001f 0px 4px 20px;
+  position: fixed;
+  top: 57px;
+  left: 10px;
+}
+
+/*设置菜单的一个类别*/
+settings_class {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff12;
+  margin: 10px;
+  padding: 10px;
+}
+
+/*设置菜单的一个类别的标题*/
+settings_title {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/*设置菜单的一项*/
+settings_option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/*设置菜单的一项的文字*/
+.settings_description {
+  color: #ffffff;
+}
+
+/*设置菜单的一项的表单元素*/
+.settings_form {
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  position: relative;
+  left: -4px;
+}
+
+/*背景链接输入框*/
+.backgroundUrlInputBox {
+  margin-left: 10px;
+  height: 22px;
+}
+
+/*应用背景*/
+.applyBackground {
+  margin-left: 2px;
+}
+
 /*移动端适配*/
 @media (max-width: 600px) {
   .searchEngine {
@@ -261,7 +357,7 @@ version {
   }
 
   /*把hover的颜色设为原来的，相当于没有*/
-  .bar_top_links:hover {
+  .nav_select_links:hover {
     background-color: #ffffff26;
   }
 
