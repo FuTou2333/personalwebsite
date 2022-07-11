@@ -16,16 +16,100 @@
   <main>
 
     <!--顶部导航条-->
-    <bar_top
-      style="display: flex;width: 100%;background:transparent;justify-content: space-between;align-items: center;padding-top: 5px;">
+    <bar_top>
 
-      <bar_top_links style="display: flex;align-items: center;">
-        <a href="https://futou2333.github.io/personalwebsite/cloudsnav.html" class="bar_top_links">首页</a>
-        <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" class="bar_top_links">关于本站</a>
-      </bar_top_links>
+      <nav_select_links style="display: flex;align-items: center;">
+        <a class="bar_top_links" onclick="changeSettings()" style="font-size:22px;">⚙</a>
+      </nav_select_links>
+
+      <!--设置菜单-->
+      <settings id="settingsId">
+
+        <!--设置菜单的一个类别-->
+        <settings_class  style="margin-top:20px;">
+
+          <!--设置菜单的一个类别的标题-->
+          <settings_title>搜索</settings_title>
+
+          <!--设置菜单的一个选项-->
+          <settings_option>
+            <span class="settings_description">搜索引擎</span>
+            <select style="height:30px;outline:none;height:22px;margin-left:5px;">
+              <option>百度</option>
+              <option>必应</option>
+              <option>谷歌</option>
+            </select>
+            </settings_option>
+
+        </settings_class>
+
+        <settings_class>
+
+          <settings_title>背景</settings_title>
+
+          <form style="margin-bottom:0;">
+
+            <settings_option>
+              <input type="radio" name="background" class="settings_form">
+              <span class="settings_description">每日一图</span>
+            </settings_option>
+
+            <settings_option>
+              <input type="radio" name="background" class="settings_form">
+              <span class="settings_description">自定义</span>
+              <input class="backgroundUrlInputBox" placeholder="输入图片链接">
+              <button class="applyBackground">应用</button>
+            </settings_option>
+
+          </form>
+
+        </settings_class>
+
+        <settings_class>
+
+          <settings_title>页面布局</settings_title>
+
+          <settings_option>
+            <input type="checkbox" class="settings_form"><span class="settings_description">显示导航</span>
+          </settings_option>
+
+          <settings_option>
+            <input type="checkbox" class="settings_form"><span class="settings_description">显示天气</span>
+          </settings_option>
+
+          <settings_option>
+            <input type="checkbox" class="settings_form"><span class="settings_description">显示一言</span>
+          </settings_option>
+
+        </settings_class>
+        
+        <!--“关于本站”入口-->
+        <about_this_site style="display:flex;justify-content:center;">
+          <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" target="_blank"
+            class="about_button" style="border:0;margin-bottom: 5px;">关于本站</a>
+        </about_this_site>
+
+      </settings>
+
+      <!--设置菜单显示隐藏js-->
+      <script>
+        settingsTag = document.getElementById('settingsId');
+        displaySettings = true;//css中本来就隐藏了，而且点了按钮才会触发检测函数，所以这里为true
+        function changeSettings() {
+          if (displaySettings) {
+            settingsTag.style.display = 'flex';
+          } else {
+            settingsTag.style.display = 'none';
+          }
+          displaySettings = !displaySettings;
+        }
+
+      </script>
 
       <!--天气组件-->
-      <div id="he-plugin-simple"></div>
+      <div style="z-index:999;">
+        <div id="he-plugin-simple"></div>
+      </div>
       <script>
         WIDGET = {
           "CONFIG": {
@@ -44,17 +128,18 @@
             "language": "auto",
             "borderRadius": "5",
             "fixed": "false",
-            "vertical": "top",
+            "vertical": "center",
             "horizontal": "left",
             "key": "84361158168946eeb595281bff49c6cc"
           }
         }
       </script>
       <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+
     </bar_top>
 
     <!--时间显示-->
-    <p id="displayTime" style="color:white;font-size: 35px;margin-top: 60px;margin-bottom: 25px;">00:00</p>
+    <p id="displayTime" style="color:white;font-size: 35px;margin-top:60px;margin-bottom: 25px;">00:00</p>
 
     <!--时间显示js-->
     <script>
@@ -75,23 +160,24 @@
         <!--输入框-->
         <input class="searchEngine" type="text" name="wd" placeholder="搜索">
         <!--搜索按钮-->
-        <button type="submit" style="position: relative;right: 32px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <button type="submit" class="searchEngine_button"
+          style="position: relative;right: 32px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
           <img src="./assets/search.png" style="height:25px;width:25px;">
       </div>
     </form>
 
     <!--导航分类-->
     <nav_select>
-      <a class="bar_top_links" id="quanBu_button" onclick="change_quanBu();check()">全部</a>
-      <a class="bar_top_links" id="zongHe_button" onclick="change_zongHe();check()">综合</a>
-      <a class="bar_top_links" id="daoHang_button" onclick="change_daoHang();check()">导航</a>
-      <a class="bar_top_links" id="baiKe_button" onclick="change_baiKe();check()">百科</a>
-      <a class="bar_top_links" id="lunTan_button" onclick="change_lunTan();check()">论坛</a>
-      <a class="bar_top_links" id="xiaoShuo_button" onclick="change_xiaoShuo();check()">小说</a>
-      <a class="bar_top_links" id="tuPian_button" onclick="change_tuPian();check()">图片</a>
-      <a class="bar_top_links" id="youXi_button" onclick="change_youXi();check()">游戏</a>
-      <a class="bar_top_links" id="yinYue_button" onclick="change_yinYue();check()">音乐</a>
-      <a class="bar_top_links" id="gongJu_button" onclick="change_gongJu();check()">工具</a>
+      <a class="nav_select_links" id="quanBu_button" onclick="change_quanBu();check()">全部</a>
+      <a class="nav_select_links" id="zongHe_button" onclick="change_zongHe();check()">综合</a>
+      <a class="nav_select_links" id="daoHang_button" onclick="change_daoHang();check()">导航</a>
+      <a class="nav_select_links" id="baiKe_button" onclick="change_baiKe();check()">百科</a>
+      <a class="nav_select_links" id="lunTan_button" onclick="change_lunTan();check()">论坛</a>
+      <a class="nav_select_links" id="xiaoShuo_button" onclick="change_xiaoShuo();check()">小说</a>
+      <a class="nav_select_links" id="tuPian_button" onclick="change_tuPian();check()">图片</a>
+      <a class="nav_select_links" id="youXi_button" onclick="change_youXi();check()">游戏</a>
+      <a class="nav_select_links" id="yinYue_button" onclick="change_yinYue();check()">音乐</a>
+      <a class="nav_select_links" id="gongJu_button" onclick="change_gongJu();check()">工具</a>
     </nav_select>
 
     <!--导航-->

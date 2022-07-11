@@ -15,45 +15,7 @@
 
   <main>
 
-    <!--顶部导航条-->
-    <bar_top
-      style="display: flex;width: 100%;background:transparent;justify-content: space-between;align-items: center;padding-top: 5px;">
-
-      <bar_top_links style="display: flex;align-items: center;">
-        <a href="https://futou2333.github.io/personalwebsite/cloudsnav.html" class="bar_top_links">首页</a>
-        <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" class="bar_top_links">关于本站</a>
-      </bar_top_links>
-
-      <!--天气组件-->
-      <div id="he-plugin-simple"></div>
-      <script>
-        WIDGET = {
-          "CONFIG": {
-            "modules": "120",
-            "background": "5",
-            "tmpColor": "FFFFFF",
-            "tmpSize": "15",
-            "cityColor": "FFFFFF",
-            "citySize": "15",
-            "aqiColor": "FFFFFF",
-            "aqiSize": "15",
-            "weatherIconSize": "23",
-            "alertIconSize": "17",
-            "padding": "10px 10px 10px 10px",
-            "shadow": "1",
-            "language": "auto",
-            "borderRadius": "5",
-            "fixed": "false",
-            "vertical": "top",
-            "horizontal": "left",
-            "key": "84361158168946eeb595281bff49c6cc"
-          }
-        }
-      </script>
-      <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
-    </bar_top>
-
-    <nav>
+    <nav style="margin-top:30px;">
       <about class="common">
 
         <about_title>
@@ -88,6 +50,20 @@
         </update_log_title>
 
         <update_log_text>
+
+          <version>
+            <span class="common_title_2"><b>v0.2.0</b><span class="common_title_3">还在开发中~</span></span>
+
+            <span class="common_text">
+              · 新增设置菜单，终于填了一个坑
+              <br>
+              · 改进导航条布局
+              <br>
+              · 修复了天气组件层级bug
+              <br>
+              · 修复了天气组件水平方向没对齐的bug
+            </span>
+          </version>
 
           <version>
             <span class="common_title_2"><b>v0.1.1</b><span class="common_title_3">2022/6/10</span></span>
@@ -128,6 +104,7 @@
         </update_log_text>
 
       </update_log>
+
     </nav>
 
 </body>
