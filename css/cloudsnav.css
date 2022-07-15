@@ -30,19 +30,19 @@ a {
   width: 500px;
   border: none;
   border-radius: 5px;
-  height: 40px;
-  background-color: #ffffffdd;
+  height: 43px;
+  background-color: #ffffff96;
   padding-left: 35px;
   padding-right: 35px;
   font-size: 16px;
   box-shadow: #0000001f 0px 4px 20px;
-  transition: 0.2s ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .searchEngine:focus {
-  width: 550px;
+  background-color: #ffffffdd;
   outline: none;
-  transition: 0.2s ease-in-out;
+  transition-duration: 0.2s;
 }
 
 /*搜索按钮*/
@@ -67,7 +67,7 @@ bar_top {
   color: #ffffff;
   display: flex;
   text-decoration: none;
-  transition: 0.1s ease-in-out;
+  transition-duration: 0.1s;
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
@@ -84,7 +84,7 @@ bar_top {
 }
 
 .bar_top_links:hover {
-  transition: 0.1s ease-in-out;
+  transition-duration: 0.1s;
   background-color: #ffffff37;
 }
 
@@ -93,7 +93,7 @@ bar_top {
   color: #ffffff;
   display: flex;
   text-decoration: none;
-  transition: 0.1s ease-in-out;
+  transition-duration: 0.1s;
   height: 35px;
   padding-left: 10px;
   padding-right: 10px;
@@ -110,7 +110,7 @@ bar_top {
 }
 
 .nav_select_links:hover {
-  transition: 0.1s ease-in-out;
+  transition-duration: 0.1s;
   background-color: #ffffff37;
 }
 
@@ -165,14 +165,14 @@ nav_link {
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  transition: 0.1s ease-in-out;
+  transition-duration: 0.1s;
   width: 285px;
   height: 60px;
 }
 
 nav_link:hover {
-  background-color: #ffffff24;
-  transition: 0.1s ease-in-out;
+  background-color: #ffffff18;
+  transition-duration: 0.1s;
 }
 
 /*导航卡片标题*/
@@ -279,7 +279,7 @@ version {
 /*设置菜单*/
 settings {
   display: none;
-  z-index:99;
+  z-index: 99;
   flex-direction: column;
   background-color: #1e1e1ef0;
   border-radius: 5px;
@@ -287,7 +287,7 @@ settings {
   box-shadow: #0000001f 0px 4px 20px;
   position: fixed;
   top: 57px;
-  left: 10px;
+  right: 10px;
 }
 
 /*设置菜单的一个类别*/
