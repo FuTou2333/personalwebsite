@@ -1,0 +1,371 @@
+/*身体*/
+body {
+  margin: 0;
+  display: flex;
+  background-image: url(https://api.mfstudio.cc/bing/);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 微软雅黑;
+  flex-direction: column;
+}
+
+/*页面主体*/
+main {
+  display: flex;
+  background-color: #00000096;
+  flex-direction: column;
+  padding-bottom: 60px;
+  align-items: center;
+}
+
+/*超链接*/
+a {
+  text-decoration: none;
+}
+
+/*搜索引擎*/
+.searchEngine {
+  width: 500px;
+  border: none;
+  border-radius: 5px;
+  height: 43px;
+  background-color: #ffffff96;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 16px;
+  box-shadow: #0000001f 0px 4px 20px;
+  transition-duration: 0.2s;
+}
+
+.searchEngine:focus {
+  background-color: #ffffffdd;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+/*搜索按钮*/
+.searchEngine_button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*顶部导航条*/
+bar_top {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*顶部导航条の按钮*/
+.bar_top_links {
+  color: #ffffff;
+  display: flex;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  align-items: center;
+  justify-content: center;
+}
+
+.bar_top_links:hover {
+  transition-duration: 0.1s;
+  background-color: #ffffff37;
+}
+
+/*导航分类按钮*/
+.nav_select_links {
+  color: #ffffff;
+  display: flex;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  align-items: center;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav_select_links:hover {
+  transition-duration: 0.1s;
+  background-color: #ffffff37;
+}
+
+/*导航分类区*/
+nav_select {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 650px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+/*导航主区*/
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: #0000001f 0px 4px 20px;
+  min-height: 500px;
+}
+
+/*导航の链接部分*/
+nav_links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*导航的一个类*/
+choice {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/*导航卡片*/
+nav_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff12;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  transition-duration: 0.1s;
+  width: 285px;
+  height: 60px;
+}
+
+nav_link:hover {
+  background-color: #ffffff18;
+  transition-duration: 0.1s;
+}
+
+/*导航卡片标题*/
+nav_link_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/*导航卡片下半部分*/
+nav_link_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/*导航卡片图标*/
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/*导航卡片介绍*/
+nav_link_description {
+  font-size: 13px;
+  color: #ffffff92;
+}
+
+/*纯文字板块*/
+.common {
+  margin: 30px;
+}
+
+/*纯文字板块の标题*/
+.common_title {
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #ffffff;
+}
+
+/*纯文字板块の二级标题*/
+.common_title_2 {
+  display: flex;
+  font-size: 23px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+/*纯文字板块の三级标题（更新日志日期）*/
+.common_title_3 {
+  font-size: 15px;
+  color: #ffffff8f;
+  margin-bottom: 8px;
+}
+
+/*纯文字板块の主体*/
+.common_text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+}
+
+/*“关于本站”页面の按钮*/
+.about_button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1.5px solid #ffffff;
+  outline: none;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-right: 10px;
+  width: auto;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.about_button:hover {
+  background-color: #ffffff24;
+  transition-duration: 0.2s;
+}
+
+/*更新日志の一个版本*/
+version {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #ffffff12;
+  padding: 20px;
+}
+
+/*设置菜单*/
+settings {
+  display: none;
+  z-index: 99;
+  flex-direction: column;
+  background-color: #1e1e1ef0;
+  border-radius: 5px;
+  width: auto;
+  box-shadow: #0000001f 0px 4px 20px;
+  position: absolute;
+  top: 57px;
+  right: 10px;
+}
+
+/*设置菜单的一个类别*/
+settings_class {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff12;
+  margin: 10px;
+  padding: 10px;
+}
+
+/*设置菜单的一个类别的标题*/
+settings_title {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/*设置菜单的一项*/
+settings_option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/*设置菜单的一项的文字*/
+.settings_description {
+  color: #ffffff;
+}
+
+/*设置菜单的一项的表单元素*/
+.settings_form {
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  position: relative;
+  left: -4px;
+}
+
+/*背景链接输入框*/
+.backgroundUrlInputBox {
+  margin-left: 10px;
+  height: 22px;
+}
+
+/*应用背景*/
+.applyBackground {
+  margin-left: 2px;
+}
+
+/*移动端适配*/
+@media (max-width: 600px) {
+  .searchEngine {
+    width: 100%;
+  }
+
+  .searchEngine:focus {
+    width: 100%;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  nav_select {
+    width: 90%;
+  }
+
+  /*把hover的颜色设为原来的，相当于没有*/
+  .nav_select_links:hover {
+    background-color: #ffffff26;
+  }
+
+  nav_link:hover {
+    background-color: #ffffff26;
+  }
+
+  .about_button:hover {
+    background-color: #ffffff26;
+  }
+}
