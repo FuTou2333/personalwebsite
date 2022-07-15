@@ -18,94 +18,6 @@
     <!--顶部导航条-->
     <bar_top>
 
-      <nav_select_links style="display: flex;align-items: center;">
-        <a class="bar_top_links" onclick="changeSettings()" style="font-size:22px;">⚙</a>
-      </nav_select_links>
-
-      <!--设置菜单-->
-      <settings id="settingsId">
-
-        <!--设置菜单的一个类别-->
-        <settings_class  style="margin-top:20px;">
-
-          <!--设置菜单的一个类别的标题-->
-          <settings_title>搜索</settings_title>
-
-          <!--设置菜单的一个选项-->
-          <settings_option>
-            <span class="settings_description">搜索引擎</span>
-            <select style="height:30px;outline:none;height:22px;margin-left:5px;">
-              <option>百度</option>
-              <option>必应</option>
-              <option>谷歌</option>
-            </select>
-            </settings_option>
-
-        </settings_class>
-
-        <settings_class>
-
-          <settings_title>背景</settings_title>
-
-          <form style="margin-bottom:0;">
-
-            <settings_option>
-              <input type="radio" name="background" class="settings_form">
-              <span class="settings_description">每日一图</span>
-            </settings_option>
-
-            <settings_option>
-              <input type="radio" name="background" class="settings_form">
-              <span class="settings_description">自定义</span>
-              <input class="backgroundUrlInputBox" placeholder="输入图片链接">
-              <button class="applyBackground">应用</button>
-            </settings_option>
-
-          </form>
-
-        </settings_class>
-
-        <settings_class>
-
-          <settings_title>页面布局</settings_title>
-
-          <settings_option>
-            <input type="checkbox" class="settings_form"><span class="settings_description">显示导航</span>
-          </settings_option>
-
-          <settings_option>
-            <input type="checkbox" class="settings_form"><span class="settings_description">显示天气</span>
-          </settings_option>
-
-          <settings_option>
-            <input type="checkbox" class="settings_form"><span class="settings_description">显示一言</span>
-          </settings_option>
-
-        </settings_class>
-        
-        <!--“关于本站”入口-->
-        <about_this_site style="display:flex;justify-content:center;">
-          <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" target="_blank"
-            class="about_button" style="border:0;margin-bottom: 5px;">关于本站</a>
-        </about_this_site>
-
-      </settings>
-
-      <!--设置菜单显示隐藏js-->
-      <script>
-        settingsTag = document.getElementById('settingsId');
-        displaySettings = true;//css中本来就隐藏了，而且点了按钮才会触发检测函数，所以这里为true
-        function changeSettings() {
-          if (displaySettings) {
-            settingsTag.style.display = 'flex';
-          } else {
-            settingsTag.style.display = 'none';
-          }
-          displaySettings = !displaySettings;
-        }
-
-      </script>
-
       <!--天气组件-->
       <div style="z-index:999;">
         <div id="he-plugin-simple"></div>
@@ -136,6 +48,94 @@
       </script>
       <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 
+      <!--设置菜单按钮-->
+      <nav_select_links style="display: flex;align-items: center;">
+        <a class="bar_top_links" onclick="changeSettings()" style="font-size:22px;">⚙</a>
+      </nav_select_links>
+
+      <!--设置菜单-->
+      <settings id="settingsId">
+
+        <!--设置菜单的一个类别-->
+        <settings_class style="margin-top:20px;">
+
+          <!--设置菜单的一个类别的标题-->
+          <settings_title>搜索</settings_title>
+
+          <!--设置菜单的一个选项-->
+          <settings_option>
+            <span class="settings_description">搜索引擎</span>
+            <select style="height:30px;outline:none;height:22px;margin-left:5px;" id="searchEngineSelect">
+              <option>百度</option>
+              <option>必应</option>
+            </select>
+          </settings_option>
+
+        </settings_class>
+
+        <settings_class>
+
+          <settings_title>背景</settings_title>
+
+          <form style="margin-bottom:0;">
+
+            <settings_option>
+              <input type="radio" name="background" class="settings_form">
+              <span class="settings_description">每日一图</span>
+            </settings_option>
+
+            <settings_option>
+              <input type="radio" name="background" class="settings_form">
+              <span class="settings_description">自定义</span>
+              <input class="backgroundUrlInputBox" placeholder="输入图片链接" style="height:22px;">
+              <button class="applyBackground" style="height:22px;display:flex;align-items:center;">应用</button>
+            </settings_option>
+
+          </form>
+
+        </settings_class>
+
+        <settings_class>
+
+          <settings_title>页面布局</settings_title>
+
+          <settings_option>
+            <input type="checkbox" class="settings_form"><span class="settings_description">显示导航</span>
+          </settings_option>
+
+          <settings_option>
+            <input type="checkbox" class="settings_form"><span class="settings_description">显示天气</span>
+          </settings_option>
+
+          <settings_option>
+            <input type="checkbox" class="settings_form"><span class="settings_description">显示一言</span>
+          </settings_option>
+
+        </settings_class>
+
+        <!--“关于本站”入口-->
+        <about_this_site style="display:flex;justify-content:center;">
+          <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" target="_blank"
+            class="about_button" style="border:0;margin-bottom: 5px;">关于本站</a>
+        </about_this_site>
+
+      </settings>
+
+      <!--设置菜单显示隐藏js-->
+      <script>
+        settingsTag = document.getElementById('settingsId');
+        displaySettings = true;//css中本来就隐藏了，而且点了按钮才会触发检测函数，所以这里为true
+        function changeSettings() {
+          if (displaySettings) {
+            settingsTag.style.display = 'flex';
+          } else {
+            settingsTag.style.display = 'none';
+          }
+          displaySettings = !displaySettings;
+        }
+
+      </script>
+
     </bar_top>
 
     <!--时间显示-->
@@ -151,20 +151,22 @@
     </script>
 
     <!--搜索框-->
-    <form action="https://www.baidu.com/s" target="_blank">
-      <div style="display: flex;justify-content: center;align-items:center;margin-bottom: 110px;">
-        <!--搜索引擎按钮-->
-        <span style="position: relative;left: 30px;">
-          <img src="./assets/engineBaidu.png" style="height:22px;width:22px;">
-        </span>
-        <!--输入框-->
-        <input class="searchEngine" type="text" name="wd" placeholder="搜索">
-        <!--搜索按钮-->
-        <button type="submit" class="searchEngine_button"
-          style="position: relative;right: 32px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-          <img src="./assets/search.png" style="height:25px;width:25px;">
-      </div>
-    </form>
+    <div id="searchEngineDiv">
+      <form action="https://www.baidu.com/s" target="_blank">
+        <div style="display: flex;justify-content: center;align-items:center;margin-bottom: 110px;">
+          <!--搜索引擎图标-->
+          <span style="position: relative;left: 30px;">
+            <img src="./assets/engineBaidu.png" style="height:22px;width:22px;" id="searchEngineIcon">
+          </span>
+          <!--输入框-->
+          <input class="searchEngine" name="wd" placeholder="搜索">
+          <!--搜索按钮-->
+          <button type="submit" class="searchEngine_button"
+            style="position: relative;right: 32px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <img src="./assets/search.png" style="height:25px;width:25px;">
+        </div>
+      </form>
+    </div>
 
     <!--导航分类-->
     <nav_select>
@@ -523,6 +525,9 @@
 
       <!--导入导航js-->
       <script src="./js/selectNav.js"></script>
+
+      <!--导入设置js-->
+      <script src="./js/settings.js"></script>
 
 </body>
 
