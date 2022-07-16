@@ -19,7 +19,7 @@
     <bar_top>
 
       <!--天气组件-->
-      <div style="z-index:999;">
+      <div style="z-index:999;" id="weatherId">
         <div id="he-plugin-simple"></div>
       </div>
       <script>
@@ -103,11 +103,11 @@
           <settings_title>页面布局</settings_title>
 
           <settings_option>
-            <input type="checkbox" class="settings_form" checked><span class="settings_description">显示导航</span>
+            <input type="checkbox" class="settings_form" id="xianShiDaoHang" checked><span class="settings_description">显示导航</span>
           </settings_option>
 
           <settings_option>
-            <input type="checkbox" class="settings_form" checked><span class="settings_description">显示天气</span>
+            <input type="checkbox" class="settings_form" id="xianShiTianQi" checked><span class="settings_description">显示天气</span>
           </settings_option>
 
         </settings_class>
@@ -184,7 +184,7 @@
     </nav_select>
 
     <!--导航-->
-    <nav>
+    <nav id="navId">
 
       <!--导航链接-->
       <nav_links>
