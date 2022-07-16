@@ -283,11 +283,12 @@ settings {
   flex-direction: column;
   background-color: #1e1e1ef0;
   border-radius: 5px;
-  width: auto;
+  width: 350px;
   box-shadow: #0000001f 0px 4px 20px;
   position: absolute;
   top: 57px;
   right: 10px;
+  padding: 10px;
 }
 
 /*设置菜单的一个类别*/
@@ -295,8 +296,9 @@ settings_class {
   display: flex;
   flex-direction: column;
   background-color: #ffffff12;
-  margin: 10px;
+  margin-bottom: 10px;
   padding: 10px;
+  border-radius: 5px;
 }
 
 /*设置菜单的一个类别的标题*/
@@ -333,9 +335,33 @@ settings_option {
   height: 22px;
 }
 
-/*应用背景*/
-.applyBackground {
+/*应用背景按钮*/
+.applyBackgroundButton {
   margin-left: 2px;
+}
+
+/*“设置”菜单的按钮*/
+.settings_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: auto;
+  color: #ffffff;
+  font-size: 15px;
+  transition-duration: 0.2s;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  flex: 1;
+  background-color: #ffffff12;
+}
+
+.settings_button:hover {
+  background-color: #ffffff18;
+  transition-duration: 0.2s;
 }
 
 /*移动端适配*/
