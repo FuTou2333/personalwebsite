@@ -32,8 +32,6 @@ ziDingYiTag.addEventListener("change", setziDingYi);
 ziDingYiInputDivTag = document.getElementById("ziDingYiInputDiv");
 function setziDingYi() {
   ziDingYiInputDivTag.style.display = "flex";
-  ziDingYiInputBoxValue = document.getElementById("ziDingYiInputBox").value; //将背景图片链接输入框的值存入变量
-  bodyTag.style.backgroundImage = "url(" + ziDingYiInputBoxValue + ")";
 }
 
 function applyBackgroundImage() {
