@@ -69,3 +69,4 @@ function change_xianShiTianQi() {
     weatherTag.style.display = 'none';
   }
   xianShiTianQi = !xianShiTianQi;
+}
