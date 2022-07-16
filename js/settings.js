@@ -51,12 +51,14 @@ xianShiTianQi = false;
 function change_xianShiDaoHang() {
   if (xianShiDaoHang) {
     navTag.style.display = 'flex';
-    bodyTag.style.height = '100vh';
-    mainTag.style.height = '100%';
-  } else {
-    navTag.style.display = 'none';
+    navSelectTag.style.display = 'flex';
     bodyTag.style.height = 'auto';
     mainTag.style.height = 'auto';
+  } else {
+    navTag.style.display = 'none';
+    navSelectTag.style.display = 'none';
+    bodyTag.style.height = '100vh';
+    mainTag.style.height = '100%';
   }
   xianShiDaoHang = !xianShiDaoHang;
 }
