@@ -11,7 +11,7 @@
   </style>
 </head>
 
-<body>
+<body id="bodyId" style="transition-duration:1s;">
 
   <main>
 
@@ -57,7 +57,7 @@
       <settings id="settingsId">
 
         <!--设置菜单的一个类别-->
-        <settings_class style="margin-top:20px;">
+        <settings_class>
 
           <!--设置菜单的一个类别的标题-->
           <settings_title>搜索</settings_title>
@@ -80,15 +80,18 @@
           <form style="margin-bottom:0;">
 
             <settings_option>
-              <input type="radio" name="background" class="settings_form">
+              <input type="radio" name="background" class="settings_form" id="meiRiYiTu" checked>
               <span class="settings_description">每日一图</span>
             </settings_option>
 
             <settings_option>
-              <input type="radio" name="background" class="settings_form">
+              <input type="radio" name="background" class="settings_form" id="ziDingYi">
               <span class="settings_description">自定义</span>
-              <input class="backgroundUrlInputBox" placeholder="输入图片链接" style="height:22px;">
-              <button class="applyBackground" style="height:22px;display:flex;align-items:center;">应用</button>
+              <div style="display:flex;flex-direction:row;display:none;" id="ziDingYiInputDiv">
+                <input class="backgroundUrlInputBox" placeholder="输入图片链接" style="height:22px;" id="ziDingYiInputBox">
+                <button type="button" class="applyBackgroundButton" style="height:22px;display:flex;align-items:center;"
+                  onclick="applyBackgroundImage()">应用</button>
+              </div>
             </settings_option>
 
           </form>
@@ -100,24 +103,25 @@
           <settings_title>页面布局</settings_title>
 
           <settings_option>
-            <input type="checkbox" class="settings_form"><span class="settings_description">显示导航</span>
+            <input type="checkbox" class="settings_form" checked><span class="settings_description">显示导航</span>
           </settings_option>
 
           <settings_option>
-            <input type="checkbox" class="settings_form"><span class="settings_description">显示天气</span>
+            <input type="checkbox" class="settings_form" checked><span class="settings_description">显示天气</span>
           </settings_option>
 
           <settings_option>
-            <input type="checkbox" class="settings_form"><span class="settings_description">显示一言</span>
+            <input type="checkbox" class="settings_form" checked><span class="settings_description">显示一言</span>
           </settings_option>
 
         </settings_class>
 
-        <!--“关于本站”入口-->
-        <about_this_site style="display:flex;justify-content:center;">
+        <!--设置菜单的链接-->
+        <div style="display:flex;justify-content: center;">
+          <a class="settings_button" style="margin-right:5px;">恢复默认</a>
           <a href="https://futou2333.github.io/personalwebsite/cloudsnav-about.html" target="_blank"
-            class="about_button" style="border:0;margin-bottom: 5px;">关于本站</a>
-        </about_this_site>
+            class="settings_button" style="margin-left:5px;">关于本站</a>
+        </div>
 
       </settings>
 
@@ -155,7 +159,7 @@
       <form action="https://www.baidu.com/s" target="_blank">
         <div style="display: flex;justify-content: center;align-items:center;margin-bottom: 110px;">
           <!--搜索引擎图标-->
-          <span style="position: relative;left: 30px;">
+          <span style="position: relative;left: 30px;cursor:pointer;" onclick="changeSettings()">
             <img src="./assets/engineBaidu.png" style="height:22px;width:22px;" id="searchEngineIcon">
           </span>
           <!--输入框-->
@@ -164,6 +168,7 @@
           <button type="submit" class="searchEngine_button"
             style="position: relative;right: 32px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
             <img src="./assets/search.png" style="height:25px;width:25px;">
+          </button>
         </div>
       </form>
     </div>
