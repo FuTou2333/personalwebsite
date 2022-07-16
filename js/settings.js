@@ -38,3 +38,34 @@ function applyBackgroundImage() {
   ziDingYiInputBoxValue = document.getElementById("ziDingYiInputBox").value; //将背景图片链接输入框的值存入变量
   bodyTag.style.backgroundImage = "url(" + ziDingYiInputBoxValue + ")";
 }
+
+//页面布局设置
+
+mainTag = document.getElementById("mainId")
+navTag = document.getElementById("navId");
+weatherTag = document.getElementById("weatherId");
+xianShiDaoHang = false;
+xianShiTianQi = false;
+
+//显示导航
+function change_xianShiDaoHang() {
+  if (xianShiDaoHang) {
+    navTag.style.display = 'flex';
+    bodyTag.style.height = '100vh';
+    mainTag.style.height = '100%';
+  } else {
+    navTag.style.display = 'none';
+    bodyTag.style.height = 'auto';
+    mainTag.style.height = 'auto';
+  }
+  xianShiDaoHang = !xianShiDaoHang;
+}
+
+//显示天气
+function change_xianShiTianQi() {
+  if (xianShiTianQi) {
+    weatherTag.style.display = 'block';
+  } else {
+    weatherTag.style.display = 'none';
+  }
+  xianShiTianQi = !xianShiTianQi;
