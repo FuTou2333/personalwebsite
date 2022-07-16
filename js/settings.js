@@ -43,6 +43,7 @@ function applyBackgroundImage() {
 
 mainTag = document.getElementById("mainId")
 navTag = document.getElementById("navId");
+navSelectTag = document.getElementById("navSelectId");
 weatherTag = document.getElementById("weatherId");
 xianShiDaoHang = false;
 xianShiTianQi = false;
