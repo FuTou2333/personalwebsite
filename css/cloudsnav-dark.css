@@ -52,6 +52,8 @@ a {
   border: none;
   padding: 0;
   cursor: pointer;
+  /*为了让手机端点击不出现蓝色高光*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /*顶部导航条*/
@@ -366,11 +368,8 @@ settings_option {
 /*移动端适配*/
 @media (max-width: 600px) {
   .searchEngine {
-    width: 100%;
-  }
-
-  .searchEngine:focus {
-    width: 100%;
+    width: 290px;
+    height: 47px;
   }
 
   nav {
@@ -383,14 +382,14 @@ settings_option {
 
   /*把hover的颜色设为原来的，相当于没有*/
   .nav_select_links:hover {
-    background-color: #ffffff26;
+    background-color: #ffffff00;
   }
 
   nav_link:hover {
-    background-color: #ffffff26;
+    background-color: #ffffff;
   }
 
   .about_button:hover {
-    background-color: #ffffff26;
+    background-color: #ffffff;
   }
 }
