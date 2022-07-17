@@ -15,10 +15,10 @@ body {
 /*页面主体*/
 main {
   display: flex;
+  background-color: #00000096;
   flex-direction: column;
   padding-bottom: 60px;
   align-items: center;
-  background-color: #0000002f;
   transition-duration: 1s;
 }
 
@@ -33,16 +33,15 @@ a {
   border: none;
   border-radius: 5px;
   height: 43px;
-  background-color: #f7f8f9eb;
+  background-color: #ffffff96;
   padding-left: 35px;
   padding-right: 35px;
   font-size: 16px;
-  box-shadow: #0000001f 0px 4px 20px;
   transition-duration: 0.2s;
 }
 
 .searchEngine:focus {
-  background-color: #ffffff;
+  background-color: #ffffffdd;
   outline: none;
   transition-duration: 0.2s;
 }
@@ -132,10 +131,9 @@ nav {
   display: flex;
   flex-direction: column;
   width: 800px;
-  background-color: #f7f8f9eb;
+  background-color: #1e1e1e;
   border-radius: 5px;
   padding: 10px;
-  box-shadow: #0000001f 0px 4px 20px;
   min-height: 500px;
 }
 
@@ -162,19 +160,18 @@ nav_link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #ffffff12;
+  color: #ffffff;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
   transition-duration: 0.1s;
   width: 285px;
   height: 60px;
-  box-shadow: #0000001f 0px 4px 16px;
 }
 
 nav_link:hover {
-  background-color: #ffffffa9;
+  background-color: #ffffff18;
   transition-duration: 0.1s;
 }
 
@@ -203,7 +200,7 @@ nav_link_right {
 /*导航卡片介绍*/
 nav_link_description {
   font-size: 13px;
-  color: #9c9c9c;
+  color: #ffffff92;
 }
 
 /*纯文字板块*/
@@ -215,14 +212,16 @@ nav_link_description {
 .common_title {
   font-weight: bold;
   font-size: 25px;
+  color: #ffffff;
   padding-bottom: 8px;
-  border-bottom: 4px solid #000000;
+  border-bottom: 4px solid #ffffff;
 }
 
 /*纯文字板块の二级标题*/
 .common_title_2 {
   display: flex;
   font-size: 23px;
+  color: #ffffff;
   margin-bottom: 8px;
   justify-content: space-between;
 }
@@ -230,14 +229,15 @@ nav_link_description {
 /*纯文字板块の三级标题（更新日志日期）*/
 .common_title_3 {
   font-size: 15px;
+  color: #ffffff8f;
   margin-bottom: 8px;
-  color: #9c9c9c;
 }
 
 /*纯文字板块の主体*/
 .common_text {
   margin-top: 10px;
   font-size: 16px;
+  color: #ffffff;
   line-height: 1.4;
   letter-spacing: 0.8px;
 }
@@ -247,8 +247,9 @@ nav_link_description {
   display: flex;
   align-items: center;
   background: transparent;
-  border: 1.5px solid #000000;
+  border: 1.5px solid #ffffff;
   outline: none;
+  color: #ffffff;
   border-radius: 5px;
   font-size: 16px;
   padding: 10px;
@@ -258,11 +259,10 @@ nav_link_description {
   width: auto;
   /*为了让手机端点击不出现蓝色高光*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  color: #000000;
 }
 
 .about_button:hover {
-  background-color: #00000013;
+  background-color: #ffffff24;
   transition-duration: 0.2s;
 }
 
@@ -272,9 +272,8 @@ version {
   flex-direction: column;
   margin-bottom: 20px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #ffffff12;
   padding: 20px;
-  box-shadow: #0000001f 0px 4px 16px;
 }
 
 /*设置菜单*/
@@ -282,10 +281,9 @@ settings {
   display: none;
   z-index: 99;
   flex-direction: column;
-  background-color: #f7f8f9eb;
+  background-color: #1e1e1ef0;
   border-radius: 5px;
   width: 350px;
-  box-shadow: #0000001f 0px 4px 20px;
   position: absolute;
   top: 57px;
   right: 10px;
@@ -296,15 +294,15 @@ settings {
 settings_class {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #ffffff12;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: #0000001f 0px 4px 16px;
 }
 
 /*设置菜单的一个类别的标题*/
 settings_title {
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -314,6 +312,11 @@ settings_option {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+/*设置菜单的一项的文字*/
+.settings_description {
+  color: #ffffff;
 }
 
 /*设置菜单的一项的表单元素*/
@@ -346,18 +349,17 @@ settings_option {
   padding: 5px;
   cursor: pointer;
   width: auto;
+  color: #ffffff;
   font-size: 15px;
   transition-duration: 0.2s;
   /*为了让手机端点击不出现蓝色高光*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   flex: 1;
-  color: #000000;
-  background-color: #ffffff;
-  box-shadow: #0000001f 0px 4px 16px;
+  background-color: #ffffff12;
 }
 
 .settings_button:hover {
-  background-color: #ffffff00;
+  background-color: #ffffff18;
   transition-duration: 0.2s;
 }
 
