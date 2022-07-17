@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>云中城云起始页-关于本站</title>
   <link rel="icon" href="./assets/favicon2.ico">
-  <style>
-    @import url(./css/cloudsnav.css);
-  </style>
+  <link rel="stylesheet" href="./css/cloudsnav.css">
+  <link rel="stylesheet" href="./css/cloudsnav-dark.css">
 </head>
 
 <body>
@@ -112,6 +111,19 @@
       </update_log>
 
     </nav>
+
+    <script>
+      //深色模式
+      darkModeData = window.localStorage.getItem("darkMode");
+      if (darkModeData === "是") {
+        disableDarkMode = false;
+        change_darkMode();
+      } else if (darkModeData === "否") {
+        disableDarkMode = true;
+        change_darkMode();
+      }
+      document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = disableDarkMode;
+    </script>
 
 </body>
 
