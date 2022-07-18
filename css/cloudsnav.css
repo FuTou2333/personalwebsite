@@ -144,8 +144,7 @@ nav {
 /*导航の链接部分*/
 nav_links {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   /*为了让手机端点击不出现蓝色高光*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
