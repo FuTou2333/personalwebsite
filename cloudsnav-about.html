@@ -125,12 +125,14 @@
       }
 
       let darkModeData = window.localStorage.getItem("darkMode");
-      if (darkModeData === "是") {
-        disableDarkMode = false;
-        change_darkMode();
-      } else if (darkModeData === "否") {
-        disableDarkMode = true;
-        change_darkMode();
+      if (darkModeData) {
+        if (darkModeData === "是") {
+          disableDarkMode = false;
+          change_darkMode();
+        } else if (darkModeData === "否") {
+          disableDarkMode = true;
+          change_darkMode();
+        }
       }
 
     </script>
