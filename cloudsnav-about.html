@@ -114,13 +114,17 @@
 
     </nav>
 
-
-    <!--导入设置js-->
-    <script src="./js/settings.js"></script>
-
     <script>
+
       //适配深色模式
-      darkModeData = window.localStorage.getItem("darkMode");
+
+      document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = true; //找到深色模式css并默认不启用
+
+      function change_darkMode() {
+        document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = disableDarkMode;
+      }
+
+      let darkModeData = window.localStorage.getItem("darkMode");
       if (darkModeData === "是") {
         disableDarkMode = false;
         change_darkMode();
@@ -128,7 +132,7 @@
         disableDarkMode = true;
         change_darkMode();
       }
-      document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = disableDarkMode;
+
     </script>
 
 </body>
