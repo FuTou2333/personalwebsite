@@ -1,18 +1,18 @@
 //将元素存入变量
-bodyTag = document.getElementById("body"); //身体
-mainTag = document.getElementById("mainId"); //页面主体
-searchEngineDivTag = document.getElementById("searchEngineDiv"); //搜索框
-navTag = document.getElementById("nav"); //导航区
-weatherTag = document.getElementById("weather"); //天气组件
-navSelectTag = document.getElementById("navSelect"); //导航选择区
-searchEngineSelectTag = document.getElementById("searchEngineSelect"); //搜索设置-搜索引擎下拉框
-darkModeTag = document.getElementById("darkMode"); //外观设置设置-深色模式勾选框
-meiRiYiTuTag = document.getElementById("meiRiYiTu"); //背景设置-每日一图单选框
-ziDingYiTag = document.getElementById("ziDingYi"); //背景设置-自定义单选框
-ziDingYiInputDivTag = document.getElementById("ziDingYiInputDiv"); //背景设置-自定义输入部分
-ziDingYiInputBoxTag = document.getElementById("ziDingYiInputBox"); //背景设置-自定义背景图片链接输入框
-xianShiDaoHangTag = document.getElementById("xianShiDaoHang"); //页面布局设置-显示导航勾选框
-xianShiTianQiTag = document.getElementById("xianShiTianQi"); //页面布局设置-显示天气勾选框
+let bodyTag = document.getElementById("body"); //身体
+let mainTag = document.getElementById("mainId"); //页面主体
+let searchEngineDivTag = document.getElementById("searchEngineDiv"); //搜索框
+let navTag = document.getElementById("nav"); //导航区
+let weatherTag = document.getElementById("weather"); //天气组件
+let navSelectTag = document.getElementById("navSelect"); //导航选择区
+let searchEngineSelectTag = document.getElementById("searchEngineSelect"); //搜索设置-搜索引擎下拉框
+let darkModeTag = document.getElementById("darkMode"); //外观设置设置-深色模式勾选框
+let meiRiYiTuTag = document.getElementById("meiRiYiTu"); //背景设置-每日一图单选框
+let ziDingYiTag = document.getElementById("ziDingYi"); //背景设置-自定义单选框
+let ziDingYiInputDivTag = document.getElementById("ziDingYiInputDiv"); //背景设置-自定义输入部分
+let ziDingYiInputBoxTag = document.getElementById("ziDingYiInputBox"); //背景设置-自定义背景图片链接输入框
+let xianShiDaoHangTag = document.getElementById("xianShiDaoHang"); //页面布局设置-显示导航勾选框
+let xianShiTianQiTag = document.getElementById("xianShiTianQi"); //页面布局设置-显示天气勾选框
 
 //搜索设置
 
@@ -33,7 +33,7 @@ function setSearchEngine() {
 //外观设置
 
 document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = true; //找到深色模式css并默认不启用
-disableDarkMode = false; //取消忽略深色模式css，但仅仅设置了变量，还要执行函数才能有效果
+let disableDarkMode = false; //取消忽略深色模式css，但仅仅设置了变量，还要执行函数才能有效果
 
 function change_darkMode() {
   document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = disableDarkMode;
@@ -71,8 +71,8 @@ function applyBackgroundImage() {
 
 //页面布局设置
 
-xianShiDaoHang = false;
-xianShiTianQi = false;
+let xianShiDaoHang = false;
+let xianShiTianQi = false;
 
 //显示导航
 function change_xianShiDaoHang() {
@@ -123,14 +123,14 @@ function setDefultSettings() {
 //数据库
 
 //搜索设置数据库
-searchEngineData = window.localStorage.getItem("searchEngine");
+let searchEngineData = window.localStorage.getItem("searchEngine");
 if (searchEngineData) {
   searchEngineSelectTag.value = searchEngineData; //将下拉框内的内容变为数据库中的内容
   setSearchEngine();
 }
 
 //外观设置数据库
-darkModeData = window.localStorage.getItem("darkMode");
+let darkModeData = window.localStorage.getItem("darkMode");
 if (darkModeData) {
   if (darkModeData === "是") {
     darkMode.checked = true;
@@ -144,8 +144,8 @@ if (darkModeData) {
 }
 
 //背景设置数据库
-backgroundImageData = window.localStorage.getItem("backgroundImage");
-backgroundImageURLData = window.localStorage.getItem("backgroundImageURL");
+let backgroundImageData = window.localStorage.getItem("backgroundImage");
+let backgroundImageURLData = window.localStorage.getItem("backgroundImageURL");
 if (backgroundImageData) {
   if (backgroundImageData === "每日一图") {
     setMeiRiYiTu();
@@ -157,7 +157,7 @@ if (backgroundImageData) {
 }
 
 //页面布局设置数据库
-xianShiDaoHangData = window.localStorage.getItem("xianShiDaoHang");
+let xianShiDaoHangData = window.localStorage.getItem("xianShiDaoHang");
 if (xianShiDaoHangData) {
   if (xianShiDaoHangData === "是") {
     xianShiDaoHang = true;
@@ -168,7 +168,7 @@ if (xianShiDaoHangData) {
   }
 }
 
-xianShiTianQiData = window.localStorage.getItem("xianShiTianQi");
+let xianShiTianQiData = window.localStorage.getItem("xianShiTianQi");
 if (xianShiTianQiData) {
   if (xianShiTianQiData === "是") {
     xianShiTianQi = true;
