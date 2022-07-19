@@ -33,7 +33,7 @@ function setSearchEngine() {
 //外观设置
 
 document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = true; //找到深色模式css并默认不启用
-disableDarkMode = false; //取消忽略深色模式css，但仅仅更改了变量，还要执行函数才能有效果
+disableDarkMode = false; //取消忽略深色模式css，但仅仅设置了变量，还要执行函数才能有效果
 
 function change_darkMode() {
   document.querySelector('link[href="./css/cloudsnav-dark.css"]').disabled = disableDarkMode;
