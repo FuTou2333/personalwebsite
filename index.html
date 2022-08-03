@@ -1,566 +1,93 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>云中城云起始页</title>
-  <link rel="icon" href="./assets/favicon.ico">
-  <link rel="stylesheet" href="./css/cloudsdale-start.css">
-  <link rel="stylesheet" href="./css/cloudsdale-start-dark.css">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>弗头嘿嘿嘿的个人网站</title>
+        <link rel="icon" href="./assets/favicon.ico">
+        <script>
+            console.log("Hello,world!");
+        </script>
+        <style>
+        @import url(./css/main.css);
+        </style>
 </head>
 
-<body id="body">
-
-  <main id="mainId">
-
-    <!--顶部导航条-->
-    <bar_top>
-
-      <!--天气组件-->
-      <div style="z-index:999;" id="weather">
-        <div id="he-plugin-simple"></div>
-      </div>
-      <script>
-        WIDGET = {
-          "CONFIG": {
-            "modules": "120",
-            "background": "5",
-            "tmpColor": "FFFFFF",
-            "tmpSize": "15",
-            "cityColor": "FFFFFF",
-            "citySize": "15",
-            "aqiColor": "FFFFFF",
-            "aqiSize": "15",
-            "weatherIconSize": "23",
-            "alertIconSize": "17",
-            "padding": "10px 10px 10px 10px",
-            "shadow": "1",
-            "language": "auto",
-            "borderRadius": "5",
-            "fixed": "false",
-            "vertical": "center",
-            "horizontal": "left",
-            "key": "84361158168946eeb595281bff49c6cc"
-          }
-        }
-      </script>
-      <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
-
-      <!--设置菜单按钮-->
-      <nav_select_links style="display: flex;align-items: center;width:100%;justify-content: flex-end;">
-        <a class="bar_top_links" onclick="changeSettings()">⚙</a>
-      </nav_select_links>
-
-      <!--设置菜单-->
-      <settings id="settingsId">
-
-        <!--设置菜单的一个类别-->
-        <settings_class>
-
-          <!--设置菜单的一个类别的标题-->
-          <settings_title>搜索</settings_title>
-
-          <!--设置菜单的一个选项-->
-          <settings_option>
-            <span class="settings_description">搜索引擎</span>
-            <select style="outline:none;height:22px;margin-left:5px;" id="searchEngineSelect">
-              <option>百度</option>
-              <option>必应</option>
-            </select>
-          </settings_option>
-
-        </settings_class>
-
-        <settings_class>
-
-          <settings_title>外观</settings_title>
-
-          <settings_option>
-            <input type="checkbox" class="settings_form" id="darkMode" onclick="change_darkMode()">
-            <span class="settings_description">深色模式</span>
-          </settings_option>
-
-        </settings_class>
-
-        <settings_class>
-
-          <settings_title>背景</settings_title>
-
-          <form style="margin-bottom:0;">
-
-            <settings_option>
-              <input type="radio" name="background" class="settings_form" id="meiRiYiTu" checked>
-              <span class="settings_description">每日一图</span>
-            </settings_option>
-
-            <settings_option>
-              <input type="radio" name="background" class="settings_form" id="ziDingYi">
-              <span class="settings_description">自定义</span>
-              <div style="display:flex;flex-direction:row;display:none;" id="ziDingYiInputDiv">
-                <input class="backgroundUrlInputBox" placeholder="输入图片链接" style="height:22px;" id="ziDingYiInputBox">
-                <button type="button" class="applyBackgroundButton" style="height:22px;display:flex;align-items:center;"
-                  onclick="applyBackgroundImage()">应用</button>
-              </div>
-            </settings_option>
-
-          </form>
-
-        </settings_class>
-
-        <settings_class>
-
-          <settings_title>页面布局</settings_title>
-
-          <settings_option>
-            <div id="xianShiDaoHangDiv">
-              <input type="checkbox" class="settings_form" id="xianShiDaoHang" onclick="change_xianShiDaoHang()"
-                checked>
-            </div>
-            <span class="settings_description">显示导航</span>
-          </settings_option>
-
-          <settings_option>
-            <div id="xianShiDaoHangDiv">
-              <input type="checkbox" class="settings_form" id="xianShiTianQi" onclick="change_xianShiTianQi()" checked>
-            </div>
-            <span class="settings_description">显示天气</span>
-          </settings_option>
-
-        </settings_class>
-
-        <!--设置菜单的链接-->
-        <div style="display:flex;justify-content: center;">
-          <a class="settings_button" style="margin-right:5px;" onclick="setDefultSettings();">恢复默认</a>
-          <a href="https://futou2333.github.io/cloudsdale-start/about.html" target="_blank" class="settings_button"
-            style="margin-left:5px;">关于本站</a>
-        </div>
-
-      </settings>
-
-      <!--设置菜单显示隐藏js-->
-      <script>
-        settingsTag = document.getElementById('settingsId');
-        displaySettings = true;//css中本来就隐藏了，而且点了按钮才会触发检测函数，所以这里为true
-        function changeSettings() {
-          if (displaySettings) {
-            settingsTag.style.display = 'flex';
-          } else {
-            settingsTag.style.display = 'none';
-          }
-          displaySettings = !displaySettings;
-        }
-
-      </script>
-
-    </bar_top>
-
-    <!--时间显示-->
-    <p id="displayTime" style="color:white;font-size: 35px;margin-top:60px;margin-bottom: 25px;">00:00</p>
-
-    <!--时间显示js-->
-    <script>
-      function getTime() {
-        let time = Date().slice(16, 21);
-        document.getElementById("displayTime").innerHTML = time;
-      }
-      setInterval("getTime()", 1000);
-    </script>
-
-    <!--搜索框-->
-    <div id="searchEngineDiv">
-      <form action="https://www.baidu.com/s" target="_blank">
-        <div style="display: flex;justify-content: center;align-items:center;margin-bottom: 110px;">
-          <!--搜索引擎图标-->
-          <span style="position: relative;left: 30px;cursor:pointer;" onclick="changeSettings()">
-            <img src="./assets/engineBaidu.png" style="height:22px;width:22px;" id="searchEngineIcon">
-          </span>
-          <!--输入框-->
-          <input class="searchEngine" name="wd" placeholder="搜索" onclick="hideSettings()">
-          <!--搜索按钮-->
-          <button type="submit" class="searchEngine_button"
-            style="position: relative;right: 32px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-            <img src="./assets/search.png" style="height:25px;width:25px;">
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <!--导航分类-->
-    <nav_select id="navSelect">
-      <a class="nav_select_links" id="quanBu_button" onclick="change_quanBu();check()">全部</a>
-      <a class="nav_select_links" id="zongHe_button" onclick="change_zongHe();check()">综合</a>
-      <a class="nav_select_links" id="daoHang_button" onclick="change_daoHang();check()">导航</a>
-      <a class="nav_select_links" id="baiKe_button" onclick="change_baiKe();check()">百科</a>
-      <a class="nav_select_links" id="lunTan_button" onclick="change_lunTan();check()">论坛</a>
-      <a class="nav_select_links" id="xiaoShuo_button" onclick="change_xiaoShuo();check()">小说</a>
-      <a class="nav_select_links" id="tuPian_button" onclick="change_tuPian();check()">图片</a>
-      <a class="nav_select_links" id="youXi_button" onclick="change_youXi();check()">游戏</a>
-      <a class="nav_select_links" id="yinYue_button" onclick="change_yinYue();check()">音乐</a>
-      <a class="nav_select_links" id="gongJu_button" onclick="change_gongJu();check()">工具</a>
-    </nav_select>
-
-    <!--导航-->
-    <nav id="nav">
-
-      <!--导航链接-->
-      <nav_links>
-
-        <!--综合类-->
-        <choice id="zongHe">
-
-          <a href="https://mylittlepony.hasbro.com/worldwide" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/hasbro.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>mlp官网</nav_link_title>
-                <nav_link_description>孩之宝mlp官网</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://www.bilibili.com/bangumi/media/md2668/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/bilibili.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>去bilibili观看</nav_link_title>
-                <nav_link_description>B站不用多说了吧</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://www.equestriacn.com/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/eqcn.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>小马中国</nav_link_title>
-                <nav_link_description>EquestriaCN，mlp新闻站</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="http://equestria.ponysky.net/home/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/ponysky.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>小马国空间联合国</nav_link_title>
-                <nav_link_description>飞马天文观测站的学术项目</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--导航类-->
-        <choice id="daoHang">
-
-          <a href="https://canterlot.site/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/canterlot.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>坎特洛特-交通枢纽</nav_link_title>
-                <nav_link_description>一个极全的mlp导航网站</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="http://equestria.ponysky.net/ep/gmyzt.html" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/ponysky.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>小马国公民一站通</nav_link_title>
-                <nav_link_description>mlp学术导航网站</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--百科类-->
-        <choice id="baiKe">
-
-          <a href="https://mlp.huijiwiki.com/wiki/MLP%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/hjwiki.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>灰机wiki</nav_link_title>
-                <nav_link_description>MLP中文维基</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/fandom.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Fandom页面</nav_link_title>
-                <nav_link_description>MLP英文维基</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://zh.moegirl.org.cn/index.php?title=%E5%BD%A9%E8%99%B9%E5%B0%8F%E9%A9%AC" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/mnbk.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>萌娘百科页面</nav_link_title>
-                <nav_link_description>彩虹小马 萌娘百科</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://baike.baidu.com/item/%E5%B0%8F%E9%A9%AC%E5%AE%9D%E8%8E%89/3883100" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/baidu.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>百度百科页面</nav_link_title>
-                <nav_link_description>小马宝莉 百度百科</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--论坛类-->
-        <choice id="lunTan">
-
-          <a href="https://tieba.baidu.com/f?kw=%E5%B0%8F%E9%A9%AC%E5%AE%9D%E8%8E%89&amp;ie=utf-8" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/baidu.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>小马宝莉吧</nav_link_title>
-                <nav_link_description>百度贴吧</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--小说类-->
-        <choice id="xiaoShuo">
-
-          <a href="https://www.fimtale.com/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/fimtale.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>FimTale</nav_link_title>
-                <nav_link_description>中文小马同人小说网站</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://www.fimfiction.net/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/fimfiction.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>FimFiction</nav_link_title>
-                <nav_link_description>英文小马同人小说网站</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--图片类-->
-        <choice id="tuPian">
-
-          <a href="https://derpibooru.org/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/derpibooru.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Derpibooru</nav_link_title>
-                <nav_link_description>又称呆站，mlp同人图网站</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://trixiebooru.org/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/derpibooru.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Derpibooru（备用域名）</nav_link_title>
-                <nav_link_description>主域名被墙就用这个</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--游戏类-->
-        <choice id="youXi">
-
-          <a href="https://pony.town/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/ponytown.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Pony Town</nav_link_title>
-                <nav_link_description>小马镇，面向全球的线上虚拟社交游戏</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://ambientproject.net/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/ambientwhite.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Ambient.White</nav_link_title>
-                <nav_link_description>画质最高的小马同人游戏之一</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="http://foe.ucoz.org/main_en.html" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/foe.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Fallout Equestria</nav_link_title>
-                <nav_link_description>辐射小马国:废墟，2D射击+RPG游戏</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://minelittlepony-mod.com/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/mlpmod.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>Mine Little Pony Mod</nav_link_title>
-                <nav_link_description>可以让你在MC里变成小马的Mod</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--音乐类-->
-        <choice id="yinYue">
-
-          <a href="https://ponyvillefm.com/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/ponyvillefm.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>PonyvilleFM</nav_link_title>
-                <nav_link_description>马镇电台</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-        <!--工具类-->
-        <choice id="gongJu">
-
-          <a href="https://software.little.my/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/mylittlesoftware.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>My Little Software</nav_link_title>
-                <nav_link_description>小马程序汇总，编程是魔法！</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://15.ai/" target="_blank">
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/15ai.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>15.ai</nav_link_title>
-                <nav_link_description>很牛的ai配音网站，同人作者福利</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://dl.gdstudio.xyz/" target=_blank>
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/gd.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>GD资源站</nav_link_title>
-                <nav_link_description>可以下载/在线观看mlp剧集</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://dl-cdn.gdstudio.xyz/" target=_blank>
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/gd.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>GD资源站(备用源)</nav_link_title>
-                <nav_link_description>主用源挂了就用这个</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-          <a href="https://cloudsdale.xyz/" target=_blank>
-            <nav_link>
-              <nav_link_left>
-                <img src="./assets/cloudsdale.png" class="icon">
-              </nav_link_left>
-              <nav_link_right>
-                <nav_link_title>云中城资源站</nav_link_title>
-                <nav_link_description>存储了所有小马剧集和部分同人游戏</nav_link_description>
-              </nav_link_right>
-            </nav_link>
-          </a>
-
-        </choice>
-
-      </nav_links>
-
-      <!--导入导航js-->
-      <script src="./js/selectNav.js"></script>
-
-      <!--导入设置js-->
-      <script src="./js/settings.js"></script>
-
-    </nav>
-
-</body>
+    <body style="display: flex;margin: 0;flex-direction: column;align-items: center; font-family: 微软雅黑;">
+
+        <!--首页-->
+        <firstpage id="bar_top_link_1" style="width: 100%;background-image: url(https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/common/4b139dfba07fc9ea3f75171b0747ab2e_w1920_h1080_s3993.jpg?imageView2/1/w/3000/h/800);color: white;letter-spacing: 1px;line-height: 1.8;display: flex;flex-direction: column;align-items: flex-start;">
+
+            <!--顶部导航栏-->
+            <bar_top style="display: flex;width: 100%;height: 45px;background-color: #1c1c1c;justify-content: space-between;position: fixed;z-index: 1;">
+                
+                <bar_top_links style="display: flex; margin-left: 10px;align-items: center;">
+                    <a href="./index.html" class="bar_top_links"><b>首页</b></a>
+                    <a href="./components.html" class="bar_top_links"><b>小组件</b></a>
+                    <a href="javascript:alert('清除失败！请坐和放宽~')" class="bar_top_links"><b>清除缓存</b></a>
+                </bar_top_links>
+                    
+                <bar_top_img style="display:flex; align-items:center;margin-right: 10px;">
+                    <img src="https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/avatar/c8960e10408c9479b83ebf7c3c58db04_w1077_h1078_s317.jpg?imageView2/1/w/240/h/240" alt="头像" width="35px" height="35px" style="border-radius:100px;">
+                </bar_top_img>
+
+            </bar_top>
+
+            <!--首页的文字-->
+            <introduction style="width:100%;background-color: #0000006f;">
+                <p style="margin:0;margin-left: 40px;margin-top: 175px;padding: 10px;font-size: 36px;"><b>弗头嘿嘿嘿の个人网站</b></p>
+                <p style="margin:0;margin-left: 40px;padding: 10px;">欢迎来到我的个人网站！</p>
+                <p style="margin:0;margin-left: 40px;margin-top:75px;padding: 10px;margin-bottom: 75px;">
+                    <a href="https://space.bilibili.com/395180217" target="_blank">
+                    <input type="button" value="B站个人空间" class="introduction_links"></a>
+                    <a href="https://afdian.net/@futou_2333" target="_blank">
+                    <input type="button" value="爱发电" class="introduction_links"></a>
+                </p>
+            </introduction>
+
+        </firstpage>
+        
+        <!--页面主体部分-->
+        <main style="display: flex;flex-direction: column;align-items: center;width: 100%;">
+
+            <!--第一页-->
+            <page1 style="display: flex;flex-direction: column;width: 100%;background-color: #ffffff;margin: 0; align-items: center;flex-wrap: wrap;">
+
+                <!--关于我自己（板块#1）-->
+                <about_me class="common">
+
+                    <about_me_title>
+                        <p class="common_title">关于我自己</p>
+                    </about_me_title>
+                   
+                    <about_me_text>
+
+                        <p class="common_text">
+                            你好！我是弗头，一位初二学生党，是B站的一位MC区UP主，是<a href="https://www.midorg.com/" target="_blank" class="hyperlink">元岛社区</a>与<a href="https://wxmc.top/" target="_blank" class="hyperlink">WXMC联盟</a>的一员，可以通过上方链接私信联系我哦~
+                            <br>
+                            <br>
+                            我之前一直有自己开发独立游戏的想法，也希望通过学习编程提高技术力，锻炼逻辑思维，所以最近在跟着<a href="https://kangwenchang.com/" target="_blank" class="hyperlink">康哥</a>学习编程[doge]
+                            <br>
+                            <br>
+                            关于“弗头”这个名字，是我小学同学给我起的外号啦~
+                        </p>
+
+                    </about_me_text>
+                
+                </about_me>
+
+            </page1>
+
+            <!--页脚-->
+            <bar_bottom style="height: 100px;display: flex;align-items: center;background-color: #eee;width: 100%;justify-content: center;">
+                <p>2022 bilibili@弗头嘿嘿嘿</p>
+            </bar_bottom>
+
+        </main>
+
+    </page2>
+
+    </body>
 
 </html>
