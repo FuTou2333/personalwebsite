@@ -1,93 +1,152 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>弗头嘿嘿嘿的个人网站</title>
-        <link rel="icon" href="./assets/favicon.ico">
-        <script>
-            console.log("Hello,world!");
-        </script>
-        <style>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弗头嘿嘿嘿的个人网站</title>
+    <link rel="icon" href="./assets/favicon.ico">
+    <script>
+        console.log("Hello,world!");
+    </script>
+    <style>
         @import url(./css/main.css);
-        </style>
+    </style>
 </head>
 
-    <body style="display: flex;margin: 0;flex-direction: column;align-items: center; font-family: 微软雅黑;">
+<body style="display: flex;margin: 0;flex-direction: column; font-family: 微软雅黑;">
 
-        <!--首页-->
-        <firstpage id="bar_top_link_1" style="width: 100%;background-image: url(https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/common/4b139dfba07fc9ea3f75171b0747ab2e_w1920_h1080_s3993.jpg?imageView2/1/w/3000/h/800);color: white;letter-spacing: 1px;line-height: 1.8;display: flex;flex-direction: column;align-items: flex-start;">
+    <!--首页-->
+    <firstpage id="bar_top_link_1"
+        style="width: 100%;background-image: url(https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/common/4b139dfba07fc9ea3f75171b0747ab2e_w1920_h1080_s3993.jpg?imageView2/1/w/3000/h/800);color: white;letter-spacing: 1px;line-height: 1.8;display: flex;flex-direction: column;align-items: flex-start;">
 
-            <!--顶部导航栏-->
-            <bar_top style="display: flex;width: 100%;height: 45px;background-color: #1c1c1c;justify-content: space-between;position: fixed;z-index: 1;">
-                
-                <bar_top_links style="display: flex; margin-left: 10px;align-items: center;">
-                    <a href="./index.html" class="bar_top_links"><b>首页</b></a>
-                    <a href="./components.html" class="bar_top_links"><b>小组件</b></a>
-                    <a href="javascript:alert('清除失败！请坐和放宽~')" class="bar_top_links"><b>清除缓存</b></a>
-                </bar_top_links>
-                    
-                <bar_top_img style="display:flex; align-items:center;margin-right: 10px;">
-                    <img src="https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/avatar/c8960e10408c9479b83ebf7c3c58db04_w1077_h1078_s317.jpg?imageView2/1/w/240/h/240" alt="头像" width="35px" height="35px" style="border-radius:100px;">
-                </bar_top_img>
+        <!--顶部导航栏-->
+        <bar_top
+            style="display: flex;width: 100%;height: 45px;background-color: #1c1c1c;justify-content: space-between;position: fixed;z-index: 1;">
 
-            </bar_top>
+            <bar_top_links style="display: flex; margin-left: 10px;align-items: center;">
+                <a href="./index.html" class="bar_top_links"><b>首页</b></a>
+                <a href="./components.html" class="bar_top_links"><b>小组件</b></a>
+                <a href="javascript:alert('清除失败！请坐和放宽~')" class="bar_top_links"><b>清除缓存</b></a>
+            </bar_top_links>
 
-            <!--首页的文字-->
-            <introduction style="width:100%;background-color: #0000006f;">
-                <p style="margin:0;margin-left: 40px;margin-top: 175px;padding: 10px;font-size: 36px;"><b>弗头嘿嘿嘿の个人网站</b></p>
-                <p style="margin:0;margin-left: 40px;padding: 10px;">欢迎来到我的个人网站！</p>
-                <p style="margin:0;margin-left: 40px;margin-top:75px;padding: 10px;margin-bottom: 75px;">
-                    <a href="https://space.bilibili.com/395180217" target="_blank">
-                    <input type="button" value="B站个人空间" class="introduction_links"></a>
-                    <a href="https://afdian.net/@futou_2333" target="_blank">
-                    <input type="button" value="爱发电" class="introduction_links"></a>
-                </p>
-            </introduction>
+            <bar_top_img style="display:flex; align-items:center;margin-right: 10px;">
+                <img src="https://pic1.afdiancdn.com/user/682959ec152611eb802752540025c377/avatar/c8960e10408c9479b83ebf7c3c58db04_w1077_h1078_s317.jpg?imageView2/1/w/240/h/240"
+                    alt="头像" width="35px" height="35px" style="border-radius:100px;">
+            </bar_top_img>
 
-        </firstpage>
-        
-        <!--页面主体部分-->
-        <main style="display: flex;flex-direction: column;align-items: center;width: 100%;">
+        </bar_top>
 
-            <!--第一页-->
-            <page1 style="display: flex;flex-direction: column;width: 100%;background-color: #ffffff;margin: 0; align-items: center;flex-wrap: wrap;">
+        <!--首页的文字-->
+        <introduction style="width:100%;background-color: #0000006f;">
+            <p style="margin:0;margin-left: 40px;margin-top: 175px;padding: 10px;font-size: 36px;"><b>弗头嘿嘿嘿の个人网站</b></p>
+            <p style="margin:0;margin-left: 40px;padding: 10px;">欢迎来到我的个人网站！</p>
+            <p style="margin:0;margin-left: 40px;margin-top:75px;padding: 10px;margin-bottom: 75px;">
+                <a href="https://github.com/FuTou2333" target="_blank">
+                    <input type="button" value="Github 主页" class="introduction_links"></a>
+                <a href="https://space.bilibili.com/395180217" target="_blank">
+                    <input type="button" value="B站主页" class="introduction_links"></a>
+            </p>
+        </introduction>
 
-                <!--关于我自己（板块#1）-->
-                <about_me class="common">
+    </firstpage>
 
-                    <about_me_title>
-                        <p class="common_title">关于我自己</p>
-                    </about_me_title>
-                   
-                    <about_me_text>
+    <!--页面主体部分-->
+    <main style="display: flex;flex-direction: column;">
 
-                        <p class="common_text">
-                            你好！我是弗头，一位初三学生党，是B站的一位MC区UP主，是<a href="https://www.midorg.com/" target="_blank" class="hyperlink">元岛社区</a>与<a href="http://wxmc.top:8002" target="_blank" class="hyperlink">WXMC联盟</a>的一员，可以通过上方链接私信联系我哦
-                            <br>
-                            <br>
-                            我之前一直有自己开发独立游戏的想法，也希望通过学习编程提高技术力，锻炼逻辑思维，所以最近在跟着<a href="https://kangwenchang.com/" target="_blank" class="hyperlink">康哥</a>学习编程
-                            <br>
-                            <br>
-                            关于“弗头”这个名字，是我小学同学给我起的外号啦~
-                        </p>
+        <!--第1页-->
+        <page>
 
-                    </about_me_text>
-                
-                </about_me>
+            <!--关于我自己（板块#1）-->
+            <about_me class="common" style="margin:0 50px 0 50px;">
 
-            </page1>
+                <about_me_title>
+                    <p class="common_title">关于我自己</p>
+                </about_me_title>
 
-            <!--页脚-->
-            <bar_bottom style="height: 100px;display: flex;align-items: center;background-color: #eee;width: 100%;justify-content: center;">
-                <p>2022 bilibili@弗头嘿嘿嘿</p>
-            </bar_bottom>
+                <about_me_text>
 
-        </main>
+                    <p class="common_text">
+                        你好！我是弗头，一位初三学生党，是<a href="https://www.midorg.com/" target="_blank" class="hyperlink">元岛社区</a>与<a
+                            href="http://wxmc.top:8002" target="_blank" class="hyperlink">WXMC联盟</a>的一员，可以通过上方链接私信联系我哦
+                        <br>
+                        <br>
+                        我一直有自己开发独立游戏的想法，也希望通过学习编程提高技术力，锻炼逻辑思维，所以最近在跟着<a href="https://kangwenchang.com/" target="_blank"
+                            class="hyperlink">康哥</a>学习编程
+                        <br>
+                        <br>
+                        关于“弗头”这个名字，是我小学同学给我起的外号啦~
+                    </p>
 
-    </page2>
+                </about_me_text>
 
-    </body>
+            </about_me>
+
+            <img src="https://i.328888.xyz/2023/01/23/OKC2H.png" class="about-me-img">
+
+        </page>
+
+        <!--第2页-->
+        <page style="flex-direction:row-reverse">
+
+            <about_me class="common" style="margin:0 50px 0 50px;">
+
+                <about_me_title>
+                    <p class="common_title">我的项目</p>
+                </about_me_title>
+
+                <about_me_text>
+
+                    <p class="common_text">
+                        <a href="https://www.canterlot.site/mlp/" target="_blank" class="hyperlink">坎特洛特-交通枢纽</a>
+                        <br>
+                        《小马宝莉》相关网址导航站，代码大部分是我写的，是我刚刚开始学js的产物，代码显然不够成熟，等我进一步学习后会逐步优化代码，也计划添加一些新功能
+                        <br>
+                        <br>
+                        更多项目正在路上~
+                    </p>
+
+                </about_me_text>
+
+            </about_me>
+
+            <img src="http://tiebapic.baidu.com/forum/w%3D580/sign=eb0092abb71fbe091c5ec31c5b620c30/c652c688d43f87943409e5f3971b0ef41ad53a14.jpg?tbpicau=2023-01-27-05_189012b06e99f9dc7ca230f0859d5cc2"
+                class="about-me-img">
+
+        </page>
+
+        <!--第3页-->
+        <page>
+
+            <about_me class="common" style="margin:0 50px 0 50px;">
+
+                <about_me_title>
+                    <p class="common_title">最后，中考加油！</p>
+                </about_me_title>
+
+                <about_me_text>
+
+                    <p class="common_text">
+                        长风破浪会有时，直挂云帆济沧海！
+                    </p>
+
+                </about_me_text>
+
+            </about_me>
+
+            <img src="https://inews.gtimg.com/newsapp_bt/0/13678312527/641" class="about-me-img">
+
+        </page>
+
+        <!--页脚-->
+        <bar_bottom
+            style="height: 100px;display: flex;align-items: center;background-color: #eee;width: 100%;justify-content: center;">
+            <p>2022-2023 弗头嘿嘿嘿</p>
+        </bar_bottom>
+
+    </main>
+
+</body>
 
 </html>
