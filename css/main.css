@@ -147,15 +147,7 @@
   font-size: 25px;
   color: #202020;
   margin-top: 0;
-}
 
-.common_title::after {
-  content: "";
-  display: flex;
-  width: 15px;
-  border-bottom: 5px solid #9e9e9e;
-  padding-top: 10px;
-  margin-left: 2px;
 }
 
 /*正文*/
@@ -163,13 +155,13 @@
   margin-top: 10px;
   font-size: 17px;
   color: #202020;
-  line-height: 1.5;
+  line-height: 1.7;
   font-weight: 300;
 }
 
 .about-me-img {
   width: 500px;
-  margin: 0 50px 0 50px;
+  margin: 0 80px 0 80px;
   /*左右都有边距，防止贴边*/
 }
 
